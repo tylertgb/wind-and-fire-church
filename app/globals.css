@@ -1,57 +1,11 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 100% 0 0;
-    --foreground: 20% 0 0;
-    --card: 100% 0 0;
-    --card-foreground: 20% 0 0;
-    --popover: 100% 0 0;
-    --popover-foreground: 20% 0 0;
-    --primary: 0.52 0.22 28;
-    --primary-foreground: 98% 0 0;
-    --secondary: 96% 0 0;
-    --secondary-foreground: 20% 0 0;
-    --accent: 0.56 0.18 250;
-    --accent-foreground: 98% 0 0;
-    --muted: 96% 0 0;
-    --muted-foreground: 45% 0 0;
-    --destructive: 0.55 0.22 25;
-    --destructive-foreground: 98% 0 0;
-    --border: 90% 0 0;
-    --input: 90% 0 0;
-    --ring: 0.52 0.22 28;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 15% 0 0;
-    --foreground: 98% 0 0;
-    --card: 15% 0 0;
-    --card-foreground: 98% 0 0;
-    --popover: 15% 0 0;
-    --popover-foreground: 98% 0 0;
-    --primary: 0.52 0.22 28;
-    --primary-foreground: 98% 0 0;
-    --secondary: 25% 0 0;
-    --secondary-foreground: 98% 0 0;
-    --accent: 0.56 0.18 250;
-    --accent-foreground: 98% 0 0;
-    --muted: 25% 0 0;
-    --muted-foreground: 65% 0 0;
-    --destructive: 0.55 0.22 25;
-    --destructive-foreground: 98% 0 0;
-    --border: 25% 0 0;
-    --input: 25% 0 0;
-    --ring: 0.52 0.22 28;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+@theme {
+  --color-primary: oklch(0.52 0.22 28);
+  --color-primary-foreground: oklch(98% 0 0);
+  --color-accent: oklch(0.56 0.18 250);
+  --color-accent-foreground: oklch(98% 0 0);
+  
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
 }
