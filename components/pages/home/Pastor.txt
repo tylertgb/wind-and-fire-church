@@ -1,0 +1,73 @@
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
+
+const PASTOR_IMG = "https://images.unsplash.com/photo-1609234656384-84223e86cf49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=600";
+
+export default function Pastor() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <section ref={ref} className="py-4 px-4 md:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7 }}
+        className="bg-[#0e0e0e] rounded-2xl overflow-hidden"
+      >
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-0">
+          {/* Pastor image */}
+          <div className="relative h-64 md:h-auto">
+            <img
+              src={PASTOR_IMG}
+              alt="Rev. Aaron Lambon Fant"
+              className="w-full h-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#0e0e0e]/60" />
+          </div>
+
+          {/* Info */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="p-8 md:p-12 flex flex-col justify-center"
+          >
+            <p className="text-[#c9a84c] text-xs font-bold tracking-[0.3em] uppercase mb-3">Our Pastor</p>
+            <h2
+              className="text-white text-3xl md:text-4xl font-black mb-4"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+            >
+              REV. AARON LAMBON FANT
+            </h2>
+            <p className="text-white/60 text-sm leading-relaxed mb-6">
+              A passionate leader, teacher, and visionary committed to raising champions for Christ and seeing lives transformed by the power of God.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="self-start border border-[#c9a84c] text-[#c9a84c] font-bold tracking-widest uppercase text-xs px-6 py-3 flex items-center gap-2 cursor-pointer hover:bg-[#c9a84c] hover:text-black transition-all"
+            >
+              Meet Our Team <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </motion.div>
+
+          {/* Quote */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.35, duration: 0.7 }}
+            className="p-8 md:p-12 flex flex-col justify-center border-t md:border-t-0 md:border-l border-white/10"
+          >
+            <div className="text-[#c9a84c] text-5xl font-black leading-none mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>{'"'}{'"'}</div>
+            <p className="text-white text-lg md:text-xl leading-relaxed font-light mb-6">
+              Our mission is simple: to know God, to love people, and to make a lasting impact in our generation.
+            </p>
+            <p className="text-[#c9a84c] italic text-sm" style={{ fontFamily: "'Georgia', serif" }}>Rev. Aaron Lambon Fant</p>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
