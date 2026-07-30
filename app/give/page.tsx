@@ -23,7 +23,7 @@ const givingOptions = [
     border: "border-yellow-200",
     initial: "MTN",
     badgeBg: "bg-yellow-400",
-    image: "/mtnmomo.jpg",
+    image: "/mtn.jpg",
     steps: ["Dial *170#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
   },
   {
@@ -39,7 +39,7 @@ const givingOptions = [
     border: "border-red-200",
     initial: "TC",
     badgeBg: "bg-red-500",
-    image: "/telecelmomo.jpg",
+    image: "/telecel.jpg",
     steps: ["Dial *110#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
   },
   {
@@ -206,17 +206,20 @@ export default function GivePage() {
 
           {/* Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-            {/* Left: number */}
+            {/* Left: number & copy */}
             <div className={`p-8 ${active.bg} flex flex-col justify-center gap-6`}>
               <div>
                 {active.image ? (
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-xl ring-4 ring-white/50 mb-5 bg-white">
+                  <div className="w-36 h-20 relative mb-5 overflow-hidden">
                     <Image
                       src={active.image}
                       alt={active.network}
-                      width={64}
-                      height={64}
-                      className="w-full h-full object-contain p-1"
+                      width={96}
+                      height={96}
+                      quality={100}
+                      priority
+                      unoptimized
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 ) : (
@@ -234,7 +237,7 @@ export default function GivePage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-muted-foreground" />
-                    <span className="font-mono font-bold text-foreground text-lg">{active.number}</span>
+                    <span className="font-bold text-foreground text-lg">{active.number}</span>
                   </div>
                   <CopyButton text={active.number} />
                 </div>
@@ -248,21 +251,21 @@ export default function GivePage() {
                   <span className="font-semibold text-foreground text-base">{active.momoname}</span>
                 </div>
               </div>
-              <div className="bg-white/70 rounded-xl px-4 py-3 text-sm text-muted-foreground">
-                USSD shortcode: <span className="font-mono font-bold text-foreground">{active.ussdCode}</span>
+              <div className="bg-white/60 rounded-xl px-4 py-3 text-sm text-muted-foreground">
+                USSD shortcode: <span className="font-bold text-foreground">{active.ussdCode}</span>
               </div>
             </div>
 
             {/* Right: steps */}
             <div className="p-8 flex flex-col justify-center gap-5">
               <div>
-                <h4 className="font-semibold text-foreground text-lg mb-1">How to Give</h4>
+                <h4 className="font-semibold text-foreground text-base mb-1">How to Give</h4>
                 <p className="text-sm text-muted-foreground">Follow these 4 easy steps</p>
               </div>
               <div className="space-y-4">
                 {active.steps.map((step, i) => (
                   <div key={step} className="flex items-center gap-4">
-                    <div className={`w-9 h-9 rounded-full bg-linear-to-br ${active.color} flex items-center justify-center shrink-0 shadow-md`}>
+                    <div className={`w-8 h-8 rounded-full bg-linear-to-br ${active.color} flex items-center justify-center shrink-0 shadow-md`}>
                       <span className="text-white text-xs font-bold">{i + 1}</span>
                     </div>
                     <span className="text-sm text-foreground">{step}</span>
