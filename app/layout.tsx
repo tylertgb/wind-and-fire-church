@@ -37,14 +37,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Wind and Fire Church A/G" }],
   creator: "Wind and Fire Church A/G",
   publisher: "Wind and Fire Church A/G",
-  metadataBase: new URL("https://windandfirechurch.org"),
+  metadataBase: new URL("https://windandfirechurch.onrender.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://windandfirechurch.org",
+    url: "https://windandfirechurch.onrender.com",
     siteName: "Wind and Fire Church A/G",
     title: "Wind and Fire Church A/G | Tamale, Ghana",
     description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana.",
