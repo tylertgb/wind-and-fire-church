@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Heart, Send, CheckCircle2, BookOpen } from "lucide-react";
+import { Heart, Send, CheckCircle2, BookOpen, HeartPulse, Users, DollarSign, Cross, Briefcase, Flame, MessageCircle, Lock } from "lucide-react";
 
 const prayerCategories = [
-  { label: "Healing", emoji: "🙏" },
-  { label: "Family", emoji: "👨‍👩‍👧" },
-  { label: "Finances", emoji: "🌿" },
-  { label: "Salvation", emoji: "✝️" },
-  { label: "Career", emoji: "💼" },
-  { label: "Marriage", emoji: "💍" },
-  { label: "Deliverance", emoji: "🔥" },
-  { label: "Other", emoji: "💬" },
+  { label: "Healing", icon: HeartPulse },
+  { label: "Family", icon: Users },
+  { label: "Finances", icon: DollarSign },
+  { label: "Salvation", icon: Cross },
+  { label: "Career", icon: Briefcase },
+  { label: "Marriage", icon: Heart },
+  { label: "Deliverance", icon: Flame },
+  { label: "Other", icon: MessageCircle },
 ];
 
 const scriptures = [
@@ -97,8 +97,9 @@ export default function PrayerSection() {
 
               {/* Confidentiality note */}
               <div className="bg-rose-50 border border-rose-200 rounded-2xl p-4">
-                <p className="text-rose-700 text-xs font-medium leading-relaxed">
-                  🔒 All prayer requests are treated with the utmost confidentiality. Your information is never shared outside our prayer team.
+                <p className="text-rose-700 text-xs font-medium leading-relaxed flex items-start gap-2">
+                  <Lock className="w-3.5 h-3.5 shrink-0 mt-0.5" />
+                  <span>All prayer requests are treated with the utmost confidentiality. Your information is never shared outside our prayer team.</span>
                 </p>
               </div>
             </motion.div>
@@ -160,7 +161,7 @@ export default function PrayerSection() {
                                 : "bg-muted text-muted-foreground border-border hover:border-rose-300 hover:text-rose-600"
                             }`}
                           >
-                            <span>{cat.emoji}</span>
+                            <cat.icon className="w-3.5 h-3.5" />
                             {cat.label}
                           </button>
                         ))}

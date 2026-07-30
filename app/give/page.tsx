@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   HandCoins, Phone, Shield, Heart, BookOpen, Church,
@@ -13,6 +14,7 @@ const givingOptions = [
     network: "MTN Mobile Money",
     shortName: "MTN MoMo",
     number: "+233 XX XXX XXXX",
+    momoname: "Wind and Fire A/G Church",
     ussdCode: "*170#",
     color: "from-yellow-400 to-amber-500",
     ringColor: "ring-yellow-300",
@@ -21,12 +23,14 @@ const givingOptions = [
     border: "border-yellow-200",
     initial: "MTN",
     badgeBg: "bg-yellow-400",
+    image: "/mtnmomo.jpg",
     steps: ["Dial *170#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
   },
   {
     network: "Telecel Cash",
     shortName: "Telecel",
     number: "+233 XX XXX XXXX",
+    momoname: "Wind and Fire A/G Church",
     ussdCode: "*110#",
     color: "from-red-500 to-rose-600",
     ringColor: "ring-red-300",
@@ -35,12 +39,14 @@ const givingOptions = [
     border: "border-red-200",
     initial: "TC",
     badgeBg: "bg-red-500",
+    image: "/telecelmomo.jpg",
     steps: ["Dial *110#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
   },
   {
     network: "AT Money",
     shortName: "AT Money",
     number: "+233 XX XXX XXXX",
+    momoname: "Wind and Fire A/G Church",
     ussdCode: "*100#",
     color: "from-blue-500 to-indigo-600",
     ringColor: "ring-blue-300",
@@ -49,6 +55,7 @@ const givingOptions = [
     border: "border-blue-200",
     initial: "AT",
     badgeBg: "bg-blue-500",
+    image: null,
     steps: ["Dial *100#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
   },
 ];
@@ -202,9 +209,21 @@ export default function GivePage() {
             {/* Left: number */}
             <div className={`p-8 ${active.bg} flex flex-col justify-center gap-6`}>
               <div>
-                <div className={`inline-flex w-16 h-16 rounded-2xl bg-linear-to-br ${active.color} items-center justify-center shadow-xl ring-4 ${active.ringColor} mb-5`}>
-                  <span className="text-white font-bold text-lg">{active.initial}</span>
-                </div>
+                {active.image ? (
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-xl ring-4 ring-white/50 mb-5 bg-white">
+                    <Image
+                      src={active.image}
+                      alt={active.network}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain p-1"
+                    />
+                  </div>
+                ) : (
+                  <div className={`inline-flex w-16 h-16 rounded-2xl bg-linear-to-br ${active.color} items-center justify-center shadow-xl ring-4 ${active.ringColor} mb-5`}>
+                    <span className="text-white font-bold text-lg">{active.initial}</span>
+                  </div>
+                )}
                 <h3 className={`font-bold text-xl mb-1 ${active.textColor}`}>{active.network}</h3>
                 <p className="text-muted-foreground text-sm">Send your gift to the number below</p>
               </div>
@@ -218,6 +237,15 @@ export default function GivePage() {
                     <span className="font-mono font-bold text-foreground text-lg">{active.number}</span>
                   </div>
                   <CopyButton text={active.number} />
+                </div>
+              </div>
+              <div className="bg-white rounded-2xl border border-border p-4">
+                <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
+                  Account Name
+                </div>
+                <div className="flex items-center gap-2">
+                  <Church className="w-4 h-4 text-muted-foreground" />
+                  <span className="font-semibold text-foreground text-base">{active.momoname}</span>
                 </div>
               </div>
               <div className="bg-white/70 rounded-xl px-4 py-3 text-sm text-muted-foreground">

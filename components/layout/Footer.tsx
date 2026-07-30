@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Ministries", href: "/#ministries" },
   { label: "Media", href: "/#media" },
   { label: "Sermons", href: "/sermons" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Give", href: "/give" },
   { label: "Prayer Request", href: "/#prayer" },
   { label: "I'm New", href: "/#visitor" },
@@ -119,7 +120,7 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-sm text-white/50 leading-relaxed mb-6">
-                A Spirit-filled Pentecostal community in the heart of Tamale — empowering lives
+                A Spirit-filled Pentecostal community in the heart of Tamale empowering lives
                 through faith, prayer, and the power of the Holy Spirit.
               </p>
 
@@ -235,13 +236,23 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-xs text-white/30">
-              &copy; {new Date().getFullYear()} Wind and Fire Assemblies of God, Tamale. All rights reserved.
-            </p>
-            <div className="flex items-center gap-4">
-              <span className="text-xs text-white/20">Assemblies of God, Ghana</span>
-              <span className="w-1 h-1 rounded-full bg-white/20" />
-              <span className="text-xs text-white/20">Northern Region</span>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <p className="text-xs text-white/30">
+                &copy; {new Date().getFullYear()} Wind and Fire Assemblies of God, Tamale. All rights reserved.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-4">
+                <span className="text-xs text-white/20">Assemblies of God, Ghana</span>
+                <span className="w-1 h-1 rounded-full bg-white/20" />
+                <span className="text-xs text-white/20">Northern Region</span>
+              </div>
+              
+              <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/20" />
+
+              <span className="text-xs text-white/40">
+                Built with <span className="text-primary">♥</span> for God&apos;s Glory
+              </span>
             </div>
           </div>
         </div>

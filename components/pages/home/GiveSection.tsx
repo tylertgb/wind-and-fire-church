@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { HandCoins, Phone, Shield, Heart, BookOpen, Church, Users, Copy, Check } from "lucide-react";
 
@@ -8,7 +9,9 @@ const givingOptions = [
   {
     network: "MTN Mobile Money",
     shortName: "MTN MoMo",
-    number: "+233 XX XXX XXXX",
+    number: "+233 55 123 4567",
+    momoname: "Wind and Fire A/G Church",
+    image: "/mtn.jpg",
     ussdCode: "*170#",
     color: "from-yellow-400 to-amber-500",
     ringColor: "ring-yellow-300",
@@ -22,7 +25,9 @@ const givingOptions = [
   {
     network: "Telecel Cash",
     shortName: "Telecel",
-    number: "+233 XX XXX XXXX",
+    number: "+233 20 765 4321",
+    momoname: "Wind and Fire A/G Church",
+    image: "/telecel.jpg",
     ussdCode: "*110#",
     color: "from-red-500 to-rose-600",
     ringColor: "ring-red-300",
@@ -37,6 +42,8 @@ const givingOptions = [
     network: "AT Money",
     shortName: "AT Money",
     number: "+233 XX XXX XXXX",
+    momoname: "Wind and Fire A/G Church",
+    image: null,
     ussdCode: "*100#",
     color: "from-blue-500 to-indigo-600",
     ringColor: "ring-blue-300",
@@ -176,9 +183,24 @@ export default function GiveSection() {
               {/* Left: number & copy */}
               <div className={`p-8 ${active.bg} flex flex-col justify-center gap-6`}>
                 <div>
-                  <div className={`inline-flex w-16 h-16 rounded-2xl bg-linear-to-br ${active.color} items-center justify-center shadow-xl ring-4 ${active.ringColor} mb-5`}>
-                    <span className="text-white font-bold text-lg">{active.initial}</span>
-                  </div>
+                  {active.image ? (
+                    <div className="w-36 h-20 relative mb-5 overflow-hidden">
+                      <Image
+                        src={active.image}
+                        alt={active.network}
+                        width={96}
+                        height={96}
+                        quality={100}
+                        priority
+                        unoptimized
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className={`inline-flex w-16 h-16 rounded-2xl bg-linear-to-br ${active.color} items-center justify-center shadow-xl ring-4 ${active.ringColor} mb-5`}>
+                      <span className="text-white font-bold text-lg">{active.initial}</span>
+                    </div>
+                  )}
                   <h3 className={`font-bold text-xl mb-1 ${active.textColor}`}>{active.network}</h3>
                   <p className="text-muted-foreground text-sm">Send your gift to the number below</p>
                 </div>
@@ -189,13 +211,22 @@ export default function GiveSection() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-muted-foreground" />
-                      <span className="font-mono font-bold text-foreground text-lg">{active.number}</span>
+                      <span className="font-bold text-foreground text-lg">{active.number}</span>
                     </div>
                     <CopyButton text={active.number} />
                   </div>
                 </div>
+                <div className="bg-white rounded-2xl border border-border p-4">
+                  <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
+                    Account Name
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Church className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-semibold text-foreground text-base">{active.momoname}</span>
+                  </div>
+                </div>
                 <div className="bg-white/60 rounded-xl px-4 py-3 text-sm text-muted-foreground">
-                  USSD shortcode: <span className="font-mono font-bold text-foreground">{active.ussdCode}</span>
+                  USSD shortcode: <span className="font-bold text-foreground">{active.ussdCode}</span>
                 </div>
               </div>
 

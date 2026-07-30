@@ -64,7 +64,7 @@ export default function VisitorSection() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="rounded-3xl overflow-hidden aspect-4/5 shadow-2xl">
+            <div className="relative rounded-3xl overflow-hidden aspect-4/5 shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1694336662029-4e5a83cdadb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800"
                 alt="Welcoming congregation"

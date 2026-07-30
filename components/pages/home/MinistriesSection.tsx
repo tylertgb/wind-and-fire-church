@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Users, Music, Baby, Globe, Shield, Handshake, Clock, ChevronRight, X } from "lucide-react";
+import { Users, Music, Baby, Globe, Shield, Handshake, Clock, ChevronRight, X, Star } from "lucide-react";
 
 const ministries = [
   {
@@ -204,7 +204,8 @@ export default function MinistriesSection() {
               <div className="absolute inset-0 flex items-center">
                 <div className="px-8 sm:px-12 max-w-xl">
                   <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${m.tagColor} text-[10px] font-bold tracking-widest uppercase mb-3`}>
-                    ⭐ Featured Ministry
+                    <Star className="w-3 h-3 fill-current" />
+                    Featured Ministry
                   </div>
                   <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-2">{m.title}</h3>
                   <p className="text-white/70 text-sm mb-4 leading-relaxed max-w-sm">{m.description}</p>

@@ -230,7 +230,7 @@ export default function HeroSlider() {
       </button>
 
       {/* Dots + progress bar */}
-      <div className="absolute bottom-20 left-0 right-0 z-20 flex flex-col items-center gap-3 px-4">
+      <div className="absolute bottom-20 left-0 right-0 mt-6 z-20 flex flex-col items-center gap-3 px-4">
         {/* Progress bar for current slide */}
         <div className="w-40 h-0.5 bg-white/20 rounded-full overflow-hidden">
           <motion.div

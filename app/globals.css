@@ -1,11 +1,50 @@
 @import "tailwindcss";
 
 @theme {
+  /* Colors */
+  --color-background: oklch(0.99 0 0);
+  --color-foreground: oklch(0.13 0.02 25);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.13 0.02 25);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.13 0.02 25);
   --color-primary: oklch(0.52 0.22 28);
-  --color-primary-foreground: oklch(98% 0 0);
+  --color-primary-foreground: oklch(0.99 0 0);
+  --color-secondary: oklch(0.95 0.02 30);
+  --color-secondary-foreground: oklch(0.52 0.22 28);
+  --color-muted: oklch(0.96 0.005 60);
+  --color-muted-foreground: oklch(0.52 0.02 25);
   --color-accent: oklch(0.56 0.18 250);
-  --color-accent-foreground: oklch(98% 0 0);
+  --color-accent-foreground: oklch(0.99 0 0);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.99 0 0);
+  --color-border: oklch(0.91 0.01 30);
+  --color-input: oklch(0.91 0.01 30);
+  --color-ring: oklch(0.52 0.22 28);
   
+  /* Fonts */
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-serif: var(--font-playfair), Georgia, serif;
+  
+  /* Radius */
+  --radius: 0.5rem;
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: oklch(0.52 0.22 28 / 10%);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.52 0.22 28 / 40%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.52 0.22 28 / 60%);
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { BookOpen, Flame, Wind, Target, Eye, Heart, ArrowRight } from "lucide-react";
 
@@ -66,7 +67,7 @@ export default function AboutSection() {
               className="relative"
             >
               {/* Main image */}
-              <div className="relative rounded-3xl overflow-hidden aspect-4/3 shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden aspect-4/5 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1663919402965-79055f1c0255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
                   alt="Wind and Fire congregation"
@@ -269,8 +270,16 @@ export default function AboutSection() {
               <div className="relative z-10 grid grid-cols-1 sm:grid-cols-5 gap-0">
                 {/* Avatar side */}
                 <div className="sm:col-span-2 p-8 flex flex-col items-center justify-center text-center border-b sm:border-b-0 sm:border-r border-white/10">
-                  <div className="w-28 h-28 rounded-full bg-linear-to-br from-primary to-orange-400 flex items-center justify-center mb-4 shadow-2xl shadow-primary/50 ring-4 ring-white/20">
-                    <span className="text-5xl font-serif font-bold text-white select-none">AF</span>
+                  <div className="w-28 h-28 rounded-full overflow-hidden mb-4 shadow-2xl shadow-primary/50 ring-4 ring-white/20">
+                    <Image
+                      src="/leadership/lafante-sm.jpg"
+                      alt="Rev. Aaron Lambon Fant"
+                      width={112}
+                      height={112}
+                      quality={100}
+                      priority
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h4 className="font-serif text-xl font-bold text-white mb-1">
                     Rev. Aaron Lambon Fant
