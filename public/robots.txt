@@ -1,0 +1,11 @@
+# Wind and Fire Church A/G - Robots.txt
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://windandfirechurch.org/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

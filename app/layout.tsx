@@ -17,8 +17,70 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Wind and Fire Church A/G",
-  description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God",
+  title: {
+    default: "Wind and Fire Church A/G | Tamale, Ghana",
+    template: "%s | Wind and Fire Church A/G",
+  },
+  description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana. A Spirit-filled Pentecostal community empowering lives through faith, prayer, and the Holy Spirit.",
+  keywords: [
+    "Wind and Fire Church",
+    "Assemblies of God",
+    "Church in Tamale",
+    "Pentecostal Church Ghana",
+    "Revival Church",
+    "Holy Spirit",
+    "Worship",
+    "Prayer",
+    "Faith Community",
+    "Northern Ghana Church"
+  ],
+  authors: [{ name: "Wind and Fire Church A/G" }],
+  creator: "Wind and Fire Church A/G",
+  publisher: "Wind and Fire Church A/G",
+  metadataBase: new URL("https://windandfirechurch.org"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://windandfirechurch.org",
+    siteName: "Wind and Fire Church A/G",
+    title: "Wind and Fire Church A/G | Tamale, Ghana",
+    description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wind and Fire Church Assemblies of God - Tamale, Ghana",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wind and Fire Church A/G | Tamale, Ghana",
+    description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana.",
+    images: ["/og-image.jpg"],
+    creator: "@windandfirechurch",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
+    // yahoo: "your-yahoo-verification-code",
+  },
 };
 
 export default function RootLayout({
