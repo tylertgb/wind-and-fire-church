@@ -1,16 +1,18 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import { Flame, MapPin, Phone, Mail, Share2, MessageCircle, Clock, ArrowRight, PlayCircle } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Ministries", href: "#ministries" },
-  { label: "Media", href: "#media" },
-  { label: "Give", href: "#give" },
-  { label: "Prayer Request", href: "#prayer" },
-  { label: "I'm New", href: "#visitor" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/#about" },
+  { label: "Ministries", href: "/#ministries" },
+  { label: "Media", href: "/#media" },
+  { label: "Sermons", href: "/sermons" },
+  { label: "Give", href: "/give" },
+  { label: "Prayer Request", href: "/#prayer" },
+  { label: "I'm New", href: "/#visitor" },
 ];
 
 const serviceTimes = [
@@ -44,11 +46,6 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  const scrollTo = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer>
 
@@ -86,20 +83,20 @@ export default function Footer() {
               We'd love to meet you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => scrollTo("#visitor")}
+              <Link
+                href="/#visitor"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-primary font-bold text-sm hover:bg-white/90 transition-all shadow-xl cursor-pointer"
               >
                 Plan My First Visit
                 <ArrowRight className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => scrollTo("#schedule")}
+              </Link>
+              <Link
+                href="/#schedule"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/20 border-2 border-white/40 text-white font-bold text-sm hover:bg-white/30 transition-all cursor-pointer"
               >
                 <Clock className="w-4 h-4" />
                 View Service Times
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -157,13 +154,13 @@ export default function Footer() {
               <ul className="space-y-3">
                 {navLinks.map((link) => (
                   <li key={link.label}>
-                    <button
-                      onClick={() => scrollTo(link.href)}
+                    <Link
+                      href={link.href}
                       className="text-sm text-white/50 hover:text-white transition-colors cursor-pointer flex items-center gap-2 group"
                     >
                       <ArrowRight className="w-3 h-3 text-primary opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                       {link.label}
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>

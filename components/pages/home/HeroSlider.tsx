@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
@@ -45,7 +47,7 @@ const slides = [
 
 const INTERVAL = 6000;
 
-export default function HeroSection() {
+export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
@@ -99,8 +101,8 @@ export default function HeroSection() {
       </div>
 
       {/* ── GRADIENT OVERLAYS ── */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/75 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/20 to-black/75 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/60 via-transparent to-transparent pointer-events-none" />
 
       {/* ── FLAME PARTICLES ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -152,7 +154,7 @@ export default function HeroSection() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-[1.1] mb-5"
             >
               {slide.headline.split("\n").map((line, i) => (
-                <span key={i} className={i === 1 ? `block text-transparent bg-clip-text bg-gradient-to-r ${slide.accent}` : "block"}>
+                <span key={i} className={i === 1 ? `block py-2 text-transparent bg-clip-text bg-linear-to-r ${slide.accent}` : "block"}>
                   {line}
                 </span>
               ))}
@@ -190,7 +192,7 @@ export default function HeroSection() {
                 onClick={() => setVideoOpen(true)}
                 className="group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white font-semibold text-base hover:bg-white/25 hover:border-white/50 transition-all duration-200 cursor-pointer"
               >
-                <span className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center shadow-lg shadow-primary/40 group-hover:scale-110 transition-transform duration-200 shrink-0">
+                <span className="w-9 h-9 rounded-full bg-linear-to-br from-primary to-orange-500 flex items-center justify-center shadow-lg shadow-primary/40 group-hover:scale-110 transition-transform duration-200 shrink-0">
                   <Play className="w-4 h-4 text-white fill-current ml-0.5" />
                 </span>
                 Watch a Message
@@ -198,7 +200,7 @@ export default function HeroSection() {
 
               <button
                 onClick={() => scrollTo("#schedule")}
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-to-r from-primary to-orange-500 text-white font-semibold text-base shadow-2xl shadow-primary/40 hover:shadow-primary/60 hover:scale-105 transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-linear-to-r from-primary to-orange-500 text-white font-semibold text-base shadow-2xl shadow-primary/40 hover:shadow-primary/60 hover:scale-105 transition-all duration-200 cursor-pointer"
               >
                 <MapPin className="w-4 h-4" />
                 Service Times & Location
@@ -233,7 +235,7 @@ export default function HeroSection() {
         <div className="w-40 h-0.5 bg-white/20 rounded-full overflow-hidden">
           <motion.div
             key={current}
-            className="h-full bg-gradient-to-r from-orange-400 to-primary rounded-full"
+            className="h-full bg-linear-to-r from-orange-400 to-primary rounded-full"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: INTERVAL / 1000, ease: "linear" }}
@@ -312,7 +314,7 @@ export default function HeroSection() {
               {/* Video embed placeholder */}
               <div className="relative bg-black" style={{ paddingBottom: "56.25%" }}>
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center shadow-2xl shadow-primary/50">
+                  <div className="w-20 h-20 rounded-full bg-linear-to-br from-primary to-orange-500 flex items-center justify-center shadow-2xl shadow-primary/50">
                     <PlayCircle className="w-10 h-10 text-white fill-white/20" />
                   </div>
                   <div className="text-center px-6">

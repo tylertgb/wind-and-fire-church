@@ -1,15 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Flame } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/" },
   { label: "About Us", href: "#about" },
   { label: "Ministries", href: "#ministries" },
+  { label: "Sermons", href: "/sermons" },
   { label: "Media", href: "#media" },
-  { label: "Give", href: "#give" },
+  { label: "Give", href: "/give" },
 ];
 
 export default function Navbar() {
@@ -21,12 +23,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const scrollTo = (href: string) => {
-    setIsOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <motion.header
@@ -42,8 +38,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button
-            onClick={() => scrollTo("#home")}
+          <Link
+            href="/"
             className="flex items-center gap-2 cursor-pointer"
           >
             <div className="flex items-center justify-center w-9 h-9 rounded-full bg-linear-to-br from-primary to-orange-500 shadow-lg">
@@ -65,31 +61,31 @@ export default function Navbar() {
                 Assemblies of God
               </div>
             </div>
-          </button>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <button
+              <Link
                 key={link.label}
-                onClick={() => scrollTo(link.href)}
+                href={link.href}
                 className={`px-4 py-2 text-sm font-medium rounded-full transition-all cursor-pointer hover:bg-primary/10 hover:text-primary ${
                   scrolled ? "text-foreground" : "text-white hover:bg-white/20 hover:text-white"
                 }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
           </nav>
 
           {/* New Here button + mobile menu */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={() => scrollTo("#visitor")}
+            <Link
+              href="/#visitor"
               className="hidden md:inline-flex items-center px-5 py-2 rounded-full text-sm font-semibold bg-primary text-white hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 cursor-pointer"
             >
               New Here?
-            </button>
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`md:hidden p-2 rounded-full transition-colors cursor-pointer ${
@@ -116,20 +112,22 @@ export default function Navbar() {
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
-                <button
+                <Link
                   key={link.label}
-                  onClick={() => scrollTo(link.href)}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
                   className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground rounded-lg hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
-              <button
-                onClick={() => scrollTo("#visitor")}
+              <Link
+                href="/#visitor"
+                onClick={() => setIsOpen(false)}
                 className="block w-full mt-2 px-4 py-3 text-sm font-semibold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors cursor-pointer text-center"
               >
                 New Here?
-              </button>
+              </Link>
             </div>
           </motion.div>
         )}

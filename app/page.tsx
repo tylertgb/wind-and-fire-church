@@ -1,22 +1,24 @@
 "use client";
 
 import AboutSection from "@/components/pages/home/AboutSection";
-import Footer from "@/components/pages/home/Footer";
+import Footer from "@/components/layout/Footer";
 import GiveSection from "@/components/pages/home/GiveSection";
-import HeroSection from "@/components/pages/home/HeroSection";
+// import HeroSection from "@/components/pages/home/HeroSection";
 import MediaSection from "@/components/pages/home/MediaSection";
 import MinistriesSection from "@/components/pages/home/MinistriesSection";
-import Navbar from "@/components/pages/home/Navbar";
+import Navbar from "@/components/layout/Navbar";
 import PrayerSection from "@/components/pages/home/PrayerSection";
 import QuickActions from "@/components/pages/home/QuickActions";
 import ScheduleSection from "@/components/pages/home/ScheduleSection";
 import VisitorSection from "@/components/pages/home/VisitorSection";
+import HeroSlider from "@/components/pages/home/HeroSlider";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
-      <HeroSection />
+      <HeroSlider/>
+      {/* <HeroSection /> */}
       <QuickActions />
       <ScheduleSection />
       <AboutSection />
