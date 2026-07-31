@@ -49,7 +49,7 @@ const slides = [
   },
 ] as const;
 
-const INTERVAL = 6000;
+const INTERVAL = 9000;
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
