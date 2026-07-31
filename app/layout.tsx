@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        width: 77,
+        height: 81,
         alt: "Wind and Fire Church Assemblies of God - Tamale, Ghana",
         type: "image/jpeg",
       },
