@@ -3,14 +3,17 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
-  Play, MapPin, ChevronDown, ChevronLeft, ChevronRight,
+  Play, MapPin, ChevronLeft, ChevronRight,
   X, PlayCircle, Volume2,
+  MoveDown,
+  ArrowLeft,
+  ArrowRight,
 } from "lucide-react";
 
 const slides = [
   {
     image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600",
-    tag: "Welcome Home",
+    tag: "Welcome To Sanctuary Of Wind & Fire",
     headline: "Experience His\nPresence Every Sunday",
     sub: "Where the Wind of the Spirit meets the Fire of Revival.",
     accent: "from-orange-400 to-red-500",
@@ -26,7 +29,7 @@ const slides = [
     image: "https://images.unsplash.com/photo-1510590124886-dc2653b48bf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600",
     tag: "Revival in Tamale",
     headline: "The Fire is\nFalling Here",
-    sub: "Wind and Fire A/G — a Spirit-filled community at King David Junction.",
+    sub: "Wind and Fire A/G - a Spirit-filled community at King David Junction.",
     accent: "from-amber-400 to-orange-500",
   },
   {
@@ -70,34 +73,31 @@ export default function HeroSlider() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="group relative min-h-screen flex items-center justify-center overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
 
       {/* ── BACKGROUND SLIDER ── */}
       <div className="absolute inset-0">
-        <AnimatePresence mode="sync">
+        {slides.map((s, i) => (
           <motion.div
-            key={current}
+            key={i}
             className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            animate={{ opacity: i === current ? 1 : 0 }}
             transition={{ duration: 1.4, ease: "easeInOut" }}
           >
             {/* Ken Burns zoom */}
             <motion.img
-              src={slide.image}
+              src={s.image}
               alt="worship"
               className="w-full h-full object-cover"
-              initial={{ scale: 1.08 }}
-              animate={{ scale: 1.18 }}
+              animate={{ scale: i === current ? 1.18 : 1.08 }}
               transition={{ duration: INTERVAL / 1000 + 1.4, ease: "linear" }}
               style={{ filter: "brightness(0.38)" }}
             />
           </motion.div>
-        </AnimatePresence>
+        ))}
       </div>
 
       {/* ── GRADIENT OVERLAYS ── */}
@@ -214,35 +214,23 @@ export default function HeroSlider() {
       {/* Left arrow */}
       <button
         onClick={prev}
-        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-200 cursor-pointer"
+        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-500 opacity-0 group-hover:opacity-100 cursor-pointer"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-5 h-5" />
+        <ArrowLeft className="w-4 h-4" />
       </button>
 
       {/* Right arrow */}
       <button
         onClick={next}
-        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-200 cursor-pointer"
+        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-500 opacity-0 group-hover:opacity-100 cursor-pointer"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-5 h-5" />
+        <ArrowRight className="w-4 h-4" />
       </button>
 
-      {/* Dots + progress bar */}
-      <div className="absolute bottom-20 left-0 right-0 mt-6 z-20 flex flex-col items-center gap-3 px-4">
-        {/* Progress bar for current slide */}
-        <div className="w-40 h-0.5 bg-white/20 rounded-full overflow-hidden">
-          <motion.div
-            key={current}
-            className="h-full bg-linear-to-r from-orange-400 to-primary rounded-full"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: INTERVAL / 1000, ease: "linear" }}
-          />
-        </div>
-
-        {/* Dot indicators */}
+      {/* Dots indicators */}
+      <div className="absolute bottom-20 left-0 right-0 z-20 flex justify-center px-4">
         <div className="flex items-center gap-2">
           {slides.map((_, i) => (
             <button
@@ -262,11 +250,6 @@ export default function HeroSlider() {
             </button>
           ))}
         </div>
-
-        {/* Slide counter */}
-        <div className="text-white/40 text-xs font-medium tracking-widest">
-          {String(current + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
-        </div>
       </div>
 
       {/* ── SCROLL INDICATOR ── */}
@@ -276,7 +259,7 @@ export default function HeroSlider() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <ChevronDown className="w-6 h-6" />
+        <MoveDown className="w-6 h-6" />
       </motion.button>
 
       {/* ── VIDEO MODAL ── */}
