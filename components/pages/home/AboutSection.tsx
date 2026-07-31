@@ -258,7 +258,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-6xl mx-auto"
           >
             <div className="relative rounded-3xl overflow-hidden bg-linear-to-br from-foreground via-slate-900 to-slate-800 text-white shadow-2xl">
               {/* Decorative elements */}
@@ -267,12 +267,12 @@ export default function AboutSection() {
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
               </div>
 
-              <div className="relative z-10 grid grid-cols-1 sm:grid-cols-5 gap-0">
-                {/* Avatar side */}
-                <div className="sm:col-span-2 p-8 flex flex-col items-center justify-center text-center border-b sm:border-b-0 sm:border-r border-white/10">
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-7 gap-0">
+                {/* Left column - Pastor Info */}
+                <div className="lg:col-span-2 p-8 flex flex-col items-center justify-center text-center border-b lg:border-b-0 lg:border-r border-white/10">
                   <div className="w-28 h-28 rounded-full overflow-hidden mb-4 shadow-2xl shadow-primary/50 ring-4 ring-white/20">
                     <Image
-                      src="/leadership/lafante-sm.jpg"
+                      src="/leadership/fant-sm.png"
                       alt="Rev. Aaron Lambon Fant"
                       width={112}
                       height={112}
@@ -281,18 +281,33 @@ export default function AboutSection() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  
+
                   <h4 className="font-serif text-xl font-bold text-white mb-1">
                     Rev. Aaron Lambon Fant
                   </h4>
                   <p className="text-primary text-sm font-semibold mb-3">Senior Pastor</p>
                   <div className="flex gap-2">
-                    <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Assemblies of God</span>
+                    <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs">Wind & Fire Assemblies of God</span>
                   </div>
                 </div>
 
-                {/* Message side */}
-                <div className="sm:col-span-3 p-8 flex flex-col justify-center gap-5">
+                {/* Middle column - Full Pastor Image */}
+                <div className="lg:col-span-2 relative overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10">
+                  <Image
+                    src="/leadership/fantfamily.png"
+                    alt="Rev. Aaron Lambon Fant - Full Portrait"
+                    width={400}
+                    height={600}
+                    quality={100}
+                    priority
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Gradient overlay at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
+                </div>
+
+                {/* Right column - Message */}
+                <div className="lg:col-span-3 p-8 flex flex-col justify-center gap-5">
                   <div className="text-4xl text-primary/60 font-serif leading-none select-none">"</div>
                   <p className="text-white/80 leading-relaxed text-sm -mt-4">
                     We are here for one reason — to see every person in Tamale encounter the living God.
