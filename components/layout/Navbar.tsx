@@ -32,7 +32,7 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? "bg-white/95 backdrop-blur-md rounded-b-xl shadow-md shadow-primary/10"
+          ? "bg-white/95 backdrop-blur-md rounded-b-lg shadow-md shadow-primary/10"
           : "bg-transparent"
       }`}
     >
@@ -109,7 +109,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden overflow-hidden"
+            className="md:hidden overflow-hidden border-t border-border/50"
           >
             <div className="rounded-2xl overflow-hidden">
               <div className="px-2 py-3 divide-y divide-border/50">

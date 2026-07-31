@@ -16,10 +16,10 @@ export default function ClientProvider({ children }: { children: React.ReactNode
       setIsFirstVisit(false);
     } else {
       sessionStorage.setItem("hasVisitedWindAndFire", "true");
-      // Hide loader after 2.2 seconds
+      // Hide loader after 3.5 seconds
       const timer = setTimeout(() => {
         setShowLoader(false);
-      }, 2200);
+      }, 3500);
       
       return () => clearTimeout(timer);
     }
