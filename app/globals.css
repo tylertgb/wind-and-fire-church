@@ -35,15 +35,15 @@
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  background: oklch(0.52 0.22 28 / 10%);
+  width: 2px;
+  background: oklch(0.52 0.22 28);
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: oklch(0.52 0.22 28 / 40%);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: oklch(0.52 0.22 28 / 60%);
