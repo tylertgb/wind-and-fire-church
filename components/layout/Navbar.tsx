@@ -31,7 +31,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || isOpen
           ? "bg-white/95 backdrop-blur-md shadow-md shadow-primary/10"
           : "bg-transparent"
       }`}
@@ -49,14 +49,14 @@ export default function Navbar() {
             <div className="leading-tight">
               <div
                 className={`font-bold text-sm tracking-tight transition-colors ${
-                  scrolled ? "text-foreground" : "text-white"
+                  scrolled || isOpen ? "text-foreground" : "text-white"
                 }`}
               >
                 Wind & Fire
               </div>
               <div
                 className={`text-[10px] tracking-widest uppercase transition-colors ${
-                  scrolled ? "text-muted-foreground" : "text-white/80"
+                  scrolled || isOpen ? "text-muted-foreground" : "text-white/80"
                 }`}
               >
                 Assemblies of God
@@ -90,7 +90,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`md:hidden p-2 rounded-full transition-colors cursor-pointer ${
-                scrolled
+                scrolled || isOpen
                   ? "text-foreground hover:bg-muted"
                   : "text-white hover:bg-white/20"
               }`}
@@ -109,7 +109,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-white/98 backdrop-blur-md border-t border-border shadow-xl"
+            className="md:hidden bg-white/98 backdrop-blur-md border-t border-border rounded-b-xl shadow-xl"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (

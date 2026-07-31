@@ -175,7 +175,7 @@ export default function HeroSlider() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="flex items-center gap-1.5 text-white/50 text-sm mb-10"
+              className="flex items-center gap-1.5 text-white/50 text-xs md:text-sm mb-10"
             >
               <MapPin className="w-3.5 h-3.5 text-orange-400" />
               King David Junction, Kanvili – Tuunayili Road, Tamale
