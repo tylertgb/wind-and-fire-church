@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import ClientProvider from "@/components/providers/ClientProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
     "Worship",
     "Prayer",
     "Faith Community",
-    "Northern Ghana Church"
+    "Northern Ghana Church",
+    "Tamale"
   ],
   authors: [{ name: "Wind and Fire Church A/G" }],
   creator: "Wind and Fire Church A/G",
@@ -55,11 +57,11 @@ export const metadata: Metadata = {
     description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana.",
     images: [
       {
-        url: "/og-image.png",
-        width: 77,
-        height: 81,
+        url: "https://windandfirechurch.onrender.com/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Wind and Fire Church Assemblies of God - Tamale, Ghana",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
@@ -67,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wind and Fire Church A/G | Tamale, Ghana",
     description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana.",
-    images: ["/og-image.png"],
+    images: ["https://windandfirechurch.onrender.com/og-image.png"],
     creator: "@windandfirechurch",
   },
   robots: {
@@ -96,7 +98,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
-        {children}
+        <ClientProvider>
+          {children}
+        </ClientProvider>
         <Toaster />
       </body>
     </html>

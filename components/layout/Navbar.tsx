@@ -32,7 +32,7 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? "bg-white/95 backdrop-blur-md shadow-md shadow-primary/10"
+          ? "bg-white/95 backdrop-blur-md rounded-b-xl shadow-md shadow-primary/10"
           : "bg-transparent"
       }`}
     >
@@ -109,26 +109,30 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-white/98 backdrop-blur-md border-t border-border rounded-b-xl shadow-xl"
+            className="md:hidden overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground rounded-lg hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="/#visitor"
-                onClick={() => setIsOpen(false)}
-                className="block w-full mt-2 px-4 py-3 text-sm font-semibold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors cursor-pointer text-center"
-              >
-                New Here?
-              </Link>
+            <div className="rounded-2xl overflow-hidden">
+              <div className="px-2 py-3 divide-y divide-border/50">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full text-left px-4 py-3.5 text-xs font-bold text-foreground tracking-widest uppercase hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <div className="pt-3 px-2">
+                  <Link
+                    href="/#visitor"
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full px-4 py-3 text-xs font-bold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors cursor-pointer text-center tracking-widest uppercase"
+                  >
+                    New Here?
+                  </Link>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

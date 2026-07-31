@@ -33,18 +33,32 @@
   --radius-sm: calc(0.5rem - 4px);
 }
 
-/* Scrollbar */
+/* Scrollbar - hidden by default, shows on hover */
 ::-webkit-scrollbar {
-  width: 2px;
-  background: oklch(0.52 0.22 28);
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.52 0.22 28 / 40%);
-  border-radius: 2px;
+  background: transparent;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.52 0.22 28 / 60%);
+
+/* Show scrollbar on hover */
+html:hover ::-webkit-scrollbar-thumb {
+  background: oklch(0.52 0.22 28 / 50%);
+}
+html:hover ::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.52 0.22 28 / 80%);
+}
+
+/* Firefox scrollbar - auto-hide behavior */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover {
+  scrollbar-color: oklch(0.52 0.22 28 / 50%) transparent;
 }
