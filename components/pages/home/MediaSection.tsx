@@ -110,7 +110,7 @@ export default function MediaSection() {
       {/* ── LIVE STREAM BANNER ── */}
       <div className="bg-linear-to-r from-foreground via-slate-900 to-slate-800 py-4 px-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col md:flex-row items-center gap-3">
             <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30">
               <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
               <span className="text-red-400 text-xs font-bold tracking-widest uppercase">Live Sunday</span>
@@ -163,7 +163,7 @@ export default function MediaSection() {
             transition={{ duration: 0.7 }}
             className="mb-14 group cursor-pointer rounded-3xl overflow-hidden relative shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
-            <div className="relative h-64 sm:h-80">
+            <div className="relative h-80">
               <img
                 src={featured.thumbnail}
                 alt={featured.title}
@@ -188,12 +188,12 @@ export default function MediaSection() {
                   <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
                     {featured.title}
                   </h3>
-                  <div className="flex items-center gap-4 text-white/60 text-sm mb-5">
-                    <span>{featured.speaker}</span>
+                  <div className="flex items-center gap-2 md:gap-4 text-white/60 text-sm mb-5">
+                    <span className="text-[10px] md:text-sm">{featured.speaker}</span>
                     <span>·</span>
-                    <span>{featured.date}</span>
+                    <span className="text-[10px] md:text-sm">{featured.date}</span>
                     <span>·</span>
-                    <span className="flex items-center gap-1">
+                    <span className="flex items-center gap-1 text-[10px] md:text-sm">
                       <Clock className="w-3.5 h-3.5" />
                       {featured.duration}
                     </span>
@@ -265,7 +265,7 @@ export default function MediaSection() {
                   className="group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                 >
                   {/* Thumbnail */}
-                  <div className="relative h-36 overflow-hidden bg-muted">
+                  <div className="relative h-44 md:h-36 overflow-hidden bg-muted">
                     <img
                       src={sermon.thumbnail}
                       alt={sermon.title}

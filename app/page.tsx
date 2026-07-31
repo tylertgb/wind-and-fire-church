@@ -12,12 +12,14 @@ import QuickActions from "@/components/pages/home/QuickActions";
 import ScheduleSection from "@/components/pages/home/ScheduleSection";
 import VisitorSection from "@/components/pages/home/VisitorSection";
 import HeroSlider from "@/components/pages/home/HeroSlider";
+import FaithCross from "@/components/ui/FaithCross";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSlider/>
+      <FaithCross />
       {/* <HeroSection /> */}
       <QuickActions />
       <ScheduleSection />

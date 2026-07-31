@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 77,
         height: 81,
         alt: "Wind and Fire Church Assemblies of God - Tamale, Ghana",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wind and Fire Church A/G | Tamale, Ghana",
     description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
     creator: "@windandfirechurch",
   },
   robots: {

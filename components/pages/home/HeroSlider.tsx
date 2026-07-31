@@ -141,7 +141,7 @@ export default function HeroSlider() {
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-semibold tracking-widest uppercase mb-6"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-semibold tracking-normal md:tracking-widest uppercase mb-6"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
               {slide.tag}
@@ -253,6 +253,16 @@ export default function HeroSlider() {
         <ArrowRight className="w-4 h-4" />
       </button>
 
+      {/* ── SCROLL INDICATOR ── */}
+      <motion.button
+        onClick={() => scrollTo("#quick-actions")}
+        className="absolute bottom-28 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors cursor-pointer z-20"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <MoveDown className="w-6 h-6" />
+      </motion.button>
+
       {/* Dots indicators */}
       <div className="absolute bottom-20 left-0 right-0 z-20 flex justify-center px-4">
         <div className="flex items-center gap-2">
@@ -275,16 +285,6 @@ export default function HeroSlider() {
           ))}
         </div>
       </div>
-
-      {/* ── SCROLL INDICATOR ── */}
-      <motion.button
-        onClick={() => scrollTo("#quick-actions")}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors cursor-pointer z-20"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <MoveDown className="w-6 h-6" />
-      </motion.button>
 
       {/* ── VIDEO MODAL ── */}
       <AnimatePresence>

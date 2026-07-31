@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     url: "https://windandfirechurch.org/gallery",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Church Gallery - Wind and Fire Church A/G",
