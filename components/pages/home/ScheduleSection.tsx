@@ -75,7 +75,7 @@ const stats = [
 
 export default function ScheduleSection() {
   return (
-    <section id="schedule" className="py-24 px-4 sm:px-6 bg-linear-to-b from-slate-50 to-white overflow-hidden">
+    <section id="schedule" className="py-20 px-4 sm:px-6 bg-linear-to-b from-slate-50 to-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

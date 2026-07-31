@@ -158,7 +158,7 @@ export default function MinistriesSection() {
   const [activeMinistry, setActiveMinistry] = useState<Ministry | null>(null);
 
   return (
-    <section id="ministries" className="py-24 px-4 sm:px-6 bg-slate-50 overflow-hidden">
+    <section id="ministries" className="py-20 px-4 sm:px-6 bg-slate-50 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

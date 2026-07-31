@@ -48,7 +48,7 @@ export default function PrayerSection() {
       </div>
 
       {/* ── MAIN PRAYER SECTION ── */}
-      <div className="py-24 px-4 sm:px-6">
+      <div className="py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">

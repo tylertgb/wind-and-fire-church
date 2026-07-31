@@ -49,7 +49,7 @@ export default function QuickActions() {
   };
 
   return (
-    <section id="quick-actions" className="py-16 px-4 sm:px-6 bg-white">
+    <section id="quick-actions" className="py-20 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {actions.map((action, i) => (

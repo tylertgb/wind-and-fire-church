@@ -54,7 +54,7 @@ export default function AboutSection() {
     <section id="about" className="bg-white overflow-hidden">
 
       {/* ── PART 1: Story & Stats ── */}
-      <div className="py-24 px-4 sm:px-6">
+      <div className="py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
@@ -281,6 +281,7 @@ export default function AboutSection() {
                       className="w-full h-full object-cover"
                     />
                   </div>
+                  
                   <h4 className="font-serif text-xl font-bold text-white mb-1">
                     Rev. Aaron Lambon Fant
                   </h4>

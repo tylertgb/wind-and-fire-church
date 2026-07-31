@@ -102,7 +102,7 @@ export default function GiveSection() {
       </div>
 
       {/* ── MAIN GIVE SECTION ── */}
-      <div className="py-24 px-4 sm:px-6 bg-linear-to-b from-orange-50/40 to-white">
+      <div className="py-20 px-4 sm:px-6 bg-linear-to-b from-orange-50/40 to-white">
         <div className="max-w-5xl mx-auto">
 
           {/* Header */}

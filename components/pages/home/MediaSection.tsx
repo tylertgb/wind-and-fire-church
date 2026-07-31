@@ -132,7 +132,7 @@ export default function MediaSection() {
       </div>
 
       {/* ── MAIN CONTENT ── */}
-      <div className="py-24 px-4 sm:px-6">
+      <div className="py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
 
           {/* Header */}

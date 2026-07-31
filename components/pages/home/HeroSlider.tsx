@@ -9,6 +9,7 @@ import {
   ArrowLeft,
   ArrowRight,
 } from "lucide-react";
+import MemberAvatarStack from "@/components/ui/MemberAvatarStack";
 
 const slides = [
   {
@@ -185,7 +186,7 @@ export default function HeroSlider() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.52 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 mb-8"
             >
               {/* Watch video */}
               <button
@@ -206,6 +207,29 @@ export default function HeroSlider() {
                 Service Times & Location
               </button>
             </motion.div>
+
+            {/* Member Avatar Stack - only show on "You Belong Here" slide */}
+            {current === 4 && (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.65 }}
+                className="inline-flex"
+              >
+                <div className="">
+                  <MemberAvatarStack
+                    avatars={[
+                      { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop", alt: "Member 1" },
+                      { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop", alt: "Member 2" },
+                      { src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop", alt: "Member 3" },
+                      { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop", alt: "Member 4" },
+                    ]}
+                    count="500+"
+                    label="active members"
+                  />
+                </div>
+              </motion.div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
