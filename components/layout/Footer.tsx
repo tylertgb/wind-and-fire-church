@@ -251,7 +251,7 @@ export default function Footer() {
               <span className="hidden sm:inline w-1 h-1 rounded-full bg-white/20" />
 
               <span className="text-xs text-white/40">
-                Built with <span className="text-primary">♥</span> for God&apos;s Glory
+                Built with <span className="text-primary">♥</span> for God&apos;s Glory by <a href="https://brightgobka.onrender.com" target="_blank" className="font-semibold text-primary">Tyler Bright</a>
               </span>
             </div>
           </div>
