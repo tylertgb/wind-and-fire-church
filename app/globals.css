@@ -35,7 +35,7 @@
 
 /* Scrollbar - hidden by default, shows on hover */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;

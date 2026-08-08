@@ -13,35 +13,35 @@ import MemberAvatarStack from "@/components/ui/MemberAvatarStack";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600",
+    image: "/slides/1.jpg",
     tag: "Welcome To Sanctuary Of Wind & Fire",
     headline: "Experience His\nPresence Every Sunday",
     sub: "Where the Wind of the Spirit meets the Fire of Revival.",
     accent: "from-orange-400 to-red-500",
   },
   {
-    image: "https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600",
+    image: "/slides/2.jpg",
     tag: "Spirit & Truth",
     headline: "Lifted Hands,\nTransformed Lives",
     sub: "Every voice matters. Every heart belongs. Come as you are.",
     accent: "from-red-400 to-primary",
   },
   {
-    image: "https://images.unsplash.com/photo-1510590124886-dc2653b48bf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600",
+    image: "/slides/3.jpg",
     tag: "Revival in Tamale",
     headline: "The Fire is\nFalling Here",
     sub: "Wind and Fire A/G - a Spirit-filled community at King David Junction.",
     accent: "from-amber-400 to-orange-500",
   },
   {
-    image: "https://images.unsplash.com/photo-1579975096649-e773152b04cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600",
+    image: "/slides/4.jpg",
     tag: "Power Encounters",
     headline: "Come Encounter\nthe Living God",
     sub: "Signs, wonders, and miracles happen when believers gather in His name.",
     accent: "from-rose-400 to-primary",
   },
   {
-    image: "https://images.unsplash.com/photo-1600288480699-0b0d8a456dd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1600",
+    image: "/slides/5.jpg",
     tag: "You Belong Here",
     headline: "A Church That\nFeels Like Family",
     sub: "New faces always welcome. Your next chapter starts this Sunday.",
@@ -126,7 +126,7 @@ export default function HeroSlider() {
       </div>
 
       {/* ── SLIDE CONTENT ── */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-10 pt-24 pb-32">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 pt-24 pb-32">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -166,7 +166,7 @@ export default function HeroSlider() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="text-lg sm:text-xl text-white/75 max-w-xl mb-2 leading-relaxed"
+              className="text-lg sm:text-xl text-white/75 max-w-2xl mb-2 leading-relaxed"
             >
               {slide.sub}
             </motion.p>
@@ -232,13 +232,36 @@ export default function HeroSlider() {
             )}
           </motion.div>
         </AnimatePresence>
+
+        {/* Dots indicators */}
+        <div className="absolute bottom-20 z-20 flex justify-start px-4">
+          <div className="flex items-center gap-2">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className="cursor-pointer transition-all duration-300"
+                aria-label={`Go to slide ${i + 1}`}
+              >
+                <motion.div
+                  animate={{
+                    width: i === current ? 28 : 8,
+                    opacity: i === current ? 1 : 0.4,
+                  }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  className="h-1.5 rounded-full bg-white"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* ── SLIDE CONTROLS (arrows + dots) ── */}
       {/* Left arrow */}
       <button
         onClick={prev}
-        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-500 opacity-0 group-hover:opacity-100 cursor-pointer"
+        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 hidden sm:flex w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-500 opacity-0 group-hover:opacity-100 cursor-pointer"
         aria-label="Previous slide"
       >
         <ArrowLeft className="w-4 h-4" />
@@ -247,7 +270,7 @@ export default function HeroSlider() {
       {/* Right arrow */}
       <button
         onClick={next}
-        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-500 opacity-0 group-hover:opacity-100 cursor-pointer"
+        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 hidden sm:flex w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-500 opacity-0 group-hover:opacity-100 cursor-pointer"
         aria-label="Next slide"
       >
         <ArrowRight className="w-4 h-4" />
@@ -262,29 +285,6 @@ export default function HeroSlider() {
       >
         <MoveDown className="w-6 h-6" />
       </motion.button>
-
-      {/* Dots indicators */}
-      <div className="absolute bottom-20 left-0 right-0 z-20 flex justify-center px-4">
-        <div className="flex items-center gap-2">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className="cursor-pointer transition-all duration-300"
-              aria-label={`Go to slide ${i + 1}`}
-            >
-              <motion.div
-                animate={{
-                  width: i === current ? 28 : 8,
-                  opacity: i === current ? 1 : 0.4,
-                }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                className="h-1.5 rounded-full bg-white"
-              />
-            </button>
-          ))}
-        </div>
-      </div>
 
       {/* ── VIDEO MODAL ── */}
       <AnimatePresence>

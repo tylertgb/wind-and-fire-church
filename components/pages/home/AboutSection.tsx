@@ -352,7 +352,7 @@ export default function AboutSection() {
           </motion.div>
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-5 top-2 bottom-2 w-px bg-linear-to-b from-primary via-accent to-primary/20 hidden sm:block" />
+            <div className="absolute left-5 top-2 bottom-2 w-px bg-linear-to-b from-primary via-accent to-primary/20 block" />
             <div className="space-y-8">
               {timeline.map((item, i) => (
                 <motion.div
