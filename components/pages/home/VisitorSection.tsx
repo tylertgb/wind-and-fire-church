@@ -19,7 +19,7 @@ export default function VisitorSection() {
 
   return (
     <section id="visitor" className="py-20 px-4 sm:px-6 bg-linear-to-br from-primary/5 via-orange-50/50 to-white">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text side */}
           <motion.div
@@ -66,7 +66,7 @@ export default function VisitorSection() {
           >
             <div className="relative rounded-3xl overflow-hidden aspect-4/5 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1694336662029-4e5a83cdadb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800"
+                src="/gallery/sunday-01.jpg"
                 alt="Welcoming congregation"
                 className="w-full h-full object-cover"
               />

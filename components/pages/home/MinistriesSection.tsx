@@ -17,7 +17,7 @@ const ministries = [
     borderColor: "border-orange-200",
     bgLight: "bg-orange-50",
     tagColor: "bg-orange-100 text-orange-700",
-    image: "https://images.unsplash.com/photo-1627423893729-3a79f48ff473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    image: "/ministries/men/1.jpg",
     featured: false,
   },
   {
@@ -32,7 +32,7 @@ const ministries = [
     borderColor: "border-blue-200",
     bgLight: "bg-blue-50",
     tagColor: "bg-blue-100 text-blue-700",
-    image: "https://images.unsplash.com/photo-1510384742052-1abcb6282645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    image: "/slides/2.jpg",
     featured: true,
   },
   {
@@ -47,7 +47,7 @@ const ministries = [
     borderColor: "border-rose-200",
     bgLight: "bg-rose-50",
     tagColor: "bg-rose-100 text-rose-700",
-    image: "https://images.unsplash.com/photo-1627423896085-e3e694d88e40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    image: "/ministries/children/1.jpg",
     featured: false,
   },
   {
@@ -62,7 +62,7 @@ const ministries = [
     borderColor: "border-violet-200",
     bgLight: "bg-violet-50",
     tagColor: "bg-violet-100 text-violet-700",
-    image: "https://images.unsplash.com/photo-1563902341721-029085ad9347?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    image: "/ministries/youth/1.jpg",
     featured: false,
   },
   {
@@ -77,7 +77,7 @@ const ministries = [
     borderColor: "border-teal-200",
     bgLight: "bg-teal-50",
     tagColor: "bg-teal-100 text-teal-700",
-    image: "https://images.unsplash.com/photo-1696483150935-2f719f1dfa6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    image: "/ministries/women/1.jpg",
     featured: false,
   },
   {
@@ -92,7 +92,7 @@ const ministries = [
     borderColor: "border-amber-200",
     bgLight: "bg-amber-50",
     tagColor: "bg-amber-100 text-amber-700",
-    image: "https://images.unsplash.com/photo-1781263378197-9ea12f94b827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    image: "/ministries/community/1.jpg",
     featured: false,
   },
 ];
@@ -158,7 +158,7 @@ export default function MinistriesSection() {
   const [activeMinistry, setActiveMinistry] = useState<Ministry | null>(null);
 
   return (
-    <section id="ministries" className="py-20 px-4 sm:px-6 bg-slate-50 overflow-hidden">
+    <section id="ministries" className="py-20 px-4 sm:px-0 bg-slate-50 overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

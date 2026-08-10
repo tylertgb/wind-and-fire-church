@@ -54,7 +54,7 @@ export default function AboutSection() {
     <section id="about" className="bg-white overflow-hidden">
 
       {/* ── PART 1: Story & Stats ── */}
-      <div className="py-20 px-4 sm:px-6">
+      <div className="py-20 px-4 sm:px-0">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
@@ -69,7 +69,7 @@ export default function AboutSection() {
               {/* Main image */}
               <div className="relative rounded-3xl overflow-hidden aspect-4/5 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1663919402965-79055f1c0255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+                  src="/slides/4.jpg"
                   alt="Wind and Fire congregation"
                   className="w-full h-full object-cover"
                 />
@@ -89,8 +89,8 @@ export default function AboutSection() {
                 className="absolute -bottom-8 -right-6 w-40 h-40 rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1627423896085-e3e694d88e40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400"
-                  alt="Children's ministry"
+                  src="/about-sm.jpg"
+                  alt="Leaders"
                   className="w-full h-full object-cover"
                 />
               </motion.div>

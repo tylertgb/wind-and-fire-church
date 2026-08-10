@@ -219,10 +219,10 @@ export default function HeroSlider() {
                 <div className="">
                   <MemberAvatarStack
                     avatars={[
-                      { src: "/members/tyler.jpg", alt: "Member 1" },
-                      { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop", alt: "Member 2" },
-                      { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop", alt: "Member 3" },
-                      { src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&h=200&fit=crop", alt: "Member 4" },
+                      { src: "/members/1.jpg", alt: "Member 1" },
+                      { src: "/members/2.jpg", alt: "Member 2" },
+                      { src: "/members/3.jpg", alt: "Member 3" },
+                      { src: "/members/4.jpg", alt: "Member 4" },
                     ]}
                     count="500+"
                     label="active members"

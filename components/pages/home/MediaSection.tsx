@@ -10,7 +10,7 @@ const sermons = [
     series: "Faith Convention 2026",
     date: "July 20, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1576919463908-de1f877114bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-01.jpg",
     duration: "58 min",
     featured: true,
   },
@@ -19,7 +19,7 @@ const sermons = [
     series: "Wisdom Series",
     date: "July 13, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1769755409781-9e8924c57362?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-02.jpg",
     duration: "47 min",
     featured: false,
   },
@@ -28,7 +28,7 @@ const sermons = [
     series: "Wisdom Series",
     date: "July 6, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1530688957198-8570b1819eeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-03.jpg",
     duration: "52 min",
     featured: false,
   },
@@ -37,7 +37,7 @@ const sermons = [
     series: "Faith Convention 2026",
     date: "June 29, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1782544120562-dae3fd999899?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-04.jpg",
     duration: "44 min",
     featured: false,
   },
@@ -46,7 +46,7 @@ const sermons = [
     series: "Power Encounters",
     date: "June 22, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1624522457679-2f62d921fd25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-05.jpg",
     duration: "61 min",
     featured: false,
   },
@@ -55,7 +55,7 @@ const sermons = [
     series: "Power Encounters",
     date: "June 15, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-06.jpg",
     duration: "39 min",
     featured: false,
   },
@@ -64,7 +64,7 @@ const sermons = [
     series: "Power Encounters",
     date: "June 8, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1547656834-630c4efa3c19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-07.jpg",
     duration: "55 min",
     featured: false,
   },
@@ -73,7 +73,7 @@ const sermons = [
     series: "Wisdom Series",
     date: "June 1, 2026",
     speaker: "Rev. Aaron Lambon Fant",
-    thumbnail: "https://images.unsplash.com/photo-1507692049790-de58290a4334?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600",
+    thumbnail: "/sermons/sermon-08.jpg",
     duration: "49 min",
     featured: false,
   },
@@ -132,7 +132,7 @@ export default function MediaSection() {
       </div>
 
       {/* ── MAIN CONTENT ── */}
-      <div className="py-20 px-4 sm:px-6">
+      <div className="py-20 px-4 sm:px-0">
         <div className="max-w-6xl mx-auto">
 
           {/* Header */}

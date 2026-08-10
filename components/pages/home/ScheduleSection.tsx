@@ -68,7 +68,7 @@ const stats = [
 
 export default function ScheduleSection() {
   return (
-    <section id="schedule" className="py-20 px-4 sm:px-6 bg-linear-to-b from-slate-50 to-white overflow-hidden">
+    <section id="schedule" className="py-20 px-4 sm:px-0 bg-linear-to-b from-slate-50 to-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -215,7 +215,7 @@ export default function ScheduleSection() {
             {/* Right: map placeholder */}
             <div className="relative h-64 md:h-auto min-h-50 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1535361251-cbe9d0d2357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800"
+                src="/location.jpg"
                 alt="Tamale gathering"
                 className="w-full h-full object-cover opacity-40"
               />

@@ -15,82 +15,142 @@ type Photo = {
 
 const photos: Photo[] = [
   {
-    url: "https://images.unsplash.com/photo-1477281765962-ef34e8bb0967?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/sunday-01.jpg",
     caption: "Sunday Morning Worship",
     category: "Sunday Services",
   },
   {
-    url: "https://images.unsplash.com/photo-1570786032462-2efc3ca8fccd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/sunday-02.jpg",
     caption: "Congregation in Prayer",
     category: "Sunday Services",
   },
   {
-    url: "https://images.unsplash.com/photo-1522158637959-30385a09e0da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/sunday-03.jpg",
     caption: "Praise & Worship Night",
     category: "Sunday Services",
   },
   {
-    url: "https://images.unsplash.com/photo-1528828085966-aff4e01c5f2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/sunday-04.jpg",
     caption: "Special Evening Service",
     category: "Sunday Services",
   },
   {
-    url: "https://images.unsplash.com/photo-1510384742052-1abcb6282645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/sunday-05.jpg",
+    caption: "Sunday Service Praise",
+    category: "Sunday Services",
+  },
+  {
+    url: "/gallery/sunday-06.jpg",
+    caption: "Sunday Worship Time",
+    category: "Sunday Services",
+  },
+  {
+    url: "/gallery/sunday-07.jpg",
+    caption: "Sunday Fellowship",
+    category: "Sunday Services",
+  },
+  {
+    url: "/gallery/sunday-08.jpg",
+    caption: "Sunday Gathering",
+    category: "Sunday Services",
+  },
+  {
+    url: "/gallery/event-01.jpg",
     caption: "Community Conference",
     category: "Events",
   },
   {
-    url: "https://images.unsplash.com/photo-1609234656381-73e732808098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/event-02.jpg",
     caption: "Outreach Event",
     category: "Events",
   },
   {
-    url: "https://images.unsplash.com/photo-1563902341721-029085ad9347?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/event-03.jpg",
     caption: "Community Celebration",
     category: "Events",
   },
   {
-    url: "https://images.unsplash.com/photo-1442504028989-ab58b5f29a4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/event-04.jpg",
     caption: "Revival Night",
     category: "Events",
   },
   {
-    url: "https://images.unsplash.com/photo-1594913434694-2164156256c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/event-05.jpg",
+    caption: "Special Conference",
+    category: "Events",
+  },
+  {
+    url: "/gallery/event-06.jpg",
+    caption: "Church Gathering",
+    category: "Events",
+  },
+  {
+    url: "/gallery/event-07.jpg",
+    caption: "Ministry Event",
+    category: "Events",
+  },
+  {
+    url: "/gallery/event-08.jpg",
+    caption: "Fellowship Event",
+    category: "Events",
+  },
+  {
+    url: "/gallery/ministry-01.jpg",
     caption: "Youth Group Fellowship",
     category: "Youth & Ministries",
   },
   {
-    url: "https://images.unsplash.com/photo-1594913421979-b9399c0cd4f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/ministry-02.jpg",
     caption: "Youth Ministry Team",
     category: "Youth & Ministries",
   },
   {
-    url: "https://images.unsplash.com/photo-1594913517373-d1e63820a2d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/ministry-03.jpg",
     caption: "Youth Outdoor Retreat",
     category: "Youth & Ministries",
   },
   {
-    url: "https://images.unsplash.com/photo-1594913508822-54188645ed4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/ministry-04.jpg",
     caption: "Ministries Gathering",
     category: "Youth & Ministries",
   },
   {
-    url: "https://images.unsplash.com/photo-1550633794-58a2127a9027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/ministry-05.jpg",
+    caption: "Children's Ministry",
+    category: "Youth & Ministries",
+  },
+  {
+    url: "/gallery/ministry-06.jpg",
+    caption: "Women's Ministry",
+    category: "Youth & Ministries",
+  },
+  {
+    url: "/gallery/ministry-07.jpg",
+    caption: "Men's Ministry",
+    category: "Youth & Ministries",
+  },
+  {
+    url: "/gallery/ministry-08.jpg",
+    caption: "Ministry Team",
+    category: "Youth & Ministries",
+  },
+  {
+    url: "/gallery/baptism-01.jpg",
     caption: "Baptism Sunday",
     category: "Baptisms",
   },
   {
-    url: "https://images.unsplash.com/photo-1737337524795-45672146176c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/baptism-02.jpg",
     caption: "Water Baptism Celebration",
     category: "Baptisms",
   },
   {
-    url: "https://images.unsplash.com/photo-1638866406441-74dede2b2f51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/baptism-03.jpg",
     caption: "New Life in Christ",
     category: "Baptisms",
   },
   {
-    url: "https://images.unsplash.com/photo-1548347845-faa3b0b9c45b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "/gallery/baptism-04.jpg",
     caption: "Baptism Testimony",
     category: "Baptisms",
   },

@@ -4,9 +4,9 @@ import { motion } from "motion/react";
 import { Play, MapPin, ChevronDown } from "lucide-react";
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1629143893729-3a79f48ff473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
-  "https://images.unsplash.com/photo-1510384742052-1abcb6282645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
-  "https://images.unsplash.com/photo-1530688957198-8570b1819eeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080",
+  "/slides/3.jpg",
+  "/slides/5.jpg",
+  "/slides/7.jpg",
 ];
 
 export default function HeroSection() {
