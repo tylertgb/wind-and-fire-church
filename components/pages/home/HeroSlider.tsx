@@ -30,7 +30,7 @@ const slides = [
     image: "/slides/3.jpg",
     tag: "Revival in Tamale",
     headline: "The Fire is\nFalling Here",
-    sub: "Wind and Fire A/G - a Spirit-filled community at King David Junction.",
+    sub: "Wind and Fire A/G - a Spirit-filled community in Tamale.",
     accent: "from-amber-400 to-orange-500",
   },
   {
@@ -178,7 +178,7 @@ export default function HeroSlider() {
               className="flex items-center gap-1.5 text-white/50 text-xs md:text-sm mb-10"
             >
               <MapPin className="w-3.5 h-3.5 text-orange-400" />
-              King David Junction, Kanvili – Tuunayili Road, Tamale
+              A6 Kanvili Kpawmo Street, Tamale
             </motion.p>
 
             {/* CTAs */}

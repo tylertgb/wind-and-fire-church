@@ -14,24 +14,17 @@ const services = [
     textColor: "text-primary",
     services: [
       {
-        time: "7:30 AM",
-        name: "Morning Celebration Service",
+        time: "7:00 AM",
+        name: "Wisdom & Power Encounter Service",
         tag: "All Welcome",
         tagColor: "bg-orange-100 text-orange-700",
-        description: "Start your Sunday with powerful worship and an uplifting Word from God.",
-      },
-      {
-        time: "10:00 AM",
-        name: "Main Celebration Service",
-        tag: "All Welcome",
-        tagColor: "bg-orange-100 text-orange-700",
-        description: "Our flagship service — spirit-filled worship, children's church, and powerful preaching.",
+        description: "Start your Sunday with powerful worship, deep teaching, and an encounter with the living God.",
       },
     ],
   },
   {
-    day: "Wednesday",
-    dayShort: "WED",
+    day: "Tuesday",
+    dayShort: "TUE",
     icon: Star,
     color: "from-accent to-blue-700",
     bgLight: "bg-blue-50",
@@ -39,11 +32,11 @@ const services = [
     textColor: "text-accent",
     services: [
       {
-        time: "6:00 PM",
-        name: "Wisdom & Power Encounter Service",
-        tag: "Mid-Week",
+        time: "9:00 AM",
+        name: "Solution Hour",
+        tag: "Morning Glory",
         tagColor: "bg-blue-100 text-blue-700",
-        description: "Midweek recharge — deep Bible study, intercessory prayer, and personal testimonies.",
+        description: "Morning prayer and breakthrough session — bringing your needs before the throne of grace.",
       },
     ],
   },
@@ -57,18 +50,18 @@ const services = [
     textColor: "text-violet-600",
     services: [
       {
-        time: "5:00 PM",
-        name: "Youth Fellowship",
-        tag: "Ages 13–35",
+        time: "6:00 PM",
+        name: "Recover All Service",
+        tag: "Power Night",
         tagColor: "bg-violet-100 text-violet-700",
-        description: "Dynamic youth meetings with games, worship, and real-talk discipleship for the next generation.",
+        description: "End your week with intense intercession, spiritual warfare, and divine recovery.",
       },
     ],
   },
 ];
 
 const stats = [
-  { value: "2", label: "Sunday Services", icon: Clock },
+  { value: "1", label: "Sunday Service", icon: Clock },
   { value: "3", label: "Weekly Meetings", icon: Calendar },
   { value: "All", label: "Ages Welcome", icon: Users },
 ];
@@ -188,8 +181,8 @@ export default function ScheduleSection() {
                   We'd Love to See You
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
-                  King David Junction, 50 meters off the<br />
-                  <strong className="text-white">Kanvili – Tuunayili Road, Tamale, Ghana</strong>
+                  A6 Kanvili Kpawmo Street<br />
+                  <strong className="text-white">NS-121-1688, Tamale, Ghana</strong>
                 </p>
               </div>
 
@@ -232,7 +225,7 @@ export default function ScheduleSection() {
                     <MapPin className="w-7 h-7 text-white fill-white/30" />
                   </div>
                   <div className="text-white font-semibold text-sm">Tamale, Ghana</div>
-                  <div className="text-white/60 text-xs mt-1">King David Junction</div>
+                  <div className="text-white/60 text-xs mt-1">Kanvili Kpawmo, NS-121-1688</div>
                 </div>
               </div>
             </div>

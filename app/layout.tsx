@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Wind and Fire Church A/G | Tamale, Ghana",
+    default: "Wind & Fire Church A/G | Tamale, Ghana",
     template: "%s | Wind and Fire Church A/G",
   },
   description: "Experience the power of worship and revival at Wind and Fire Church Assembly of God in Tamale, Ghana. A Spirit-filled Pentecostal community empowering lives through faith, prayer, and the Holy Spirit.",

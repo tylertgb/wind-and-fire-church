@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Phone, Church, Copy, Check } from "lucide-react";
+import { Phone, Church, Copy, Check, Building2, CreditCard } from "lucide-react";
 
 export const givingOptions = [
   {
+    type: "momo",
     network: "MTN Mobile Money",
     shortName: "MTN MoMo",
-    number: "+233 55 123 4567",
-    momoname: "Wind and Fire A/G Church",
+    number: "0591448918",
+    momoname: "Sanctuary of Wind and Fire AG",
     image: "/mtn.jpg",
     ussdCode: "*170#",
     color: "from-yellow-400 to-amber-500",
@@ -19,13 +20,14 @@ export const givingOptions = [
     border: "border-yellow-200",
     initial: "MTN",
     badgeBg: "bg-yellow-400",
-    steps: ["Dial *170#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
+    steps: ["Dial *170#", "Select 'Send Money'", "Enter 0591448918", "Enter amount & confirm"],
   },
   {
+    type: "momo",
     network: "Telecel Cash",
     shortName: "Telecel",
-    number: "+233 20 765 4321",
-    momoname: "Wind and Fire A/G Church",
+    number: "0591448918",
+    momoname: "Sanctuary of Wind and Fire AG",
     image: "/telecel.jpg",
     ussdCode: "*110#",
     color: "from-red-500 to-rose-600",
@@ -35,23 +37,39 @@ export const givingOptions = [
     border: "border-red-200",
     initial: "TC",
     badgeBg: "bg-red-500",
-    steps: ["Dial *110#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
+    steps: ["Dial *110#", "Select 'Send Money'", "Enter 0591448918", "Enter amount & confirm"],
   },
   {
-    network: "AT Money",
-    shortName: "AT Money",
-    number: "+233 XX XXX XXXX",
-    momoname: "Wind and Fire A/G Church",
-    image: null,
-    ussdCode: "*100#",
-    color: "from-blue-500 to-indigo-600",
+    type: "bank",
+    network: "Zenith Bank",
+    shortName: "Zenith Bank",
+    accountNumber: "9061120314",
+    accountName: "Sanctuary of Wind and Fire AG",
+    image: "/zenith-bank.jpg",
+    color: "from-red-600 to-red-700",
+    ringColor: "ring-red-300",
+    textColor: "text-red-900",
+    bg: "bg-linear-to-br from-red-50 to-orange-50",
+    border: "border-red-200",
+    initial: "ZB",
+    badgeBg: "bg-red-600",
+    steps: ["Visit any Zenith Bank branch", "Request to deposit to account 9061120314", "Provide account name for verification", "Get your receipt"],
+  },
+  {
+    type: "bank",
+    network: "UMB Bank",
+    shortName: "UMB",
+    accountNumber: "0371381804017",
+    accountName: "Sanctuary of Wind and Fire AG",
+    image: "/umb.jpg",
+    color: "from-blue-600 to-cyan-600",
     ringColor: "ring-blue-300",
     textColor: "text-blue-900",
-    bg: "bg-linear-to-br from-blue-50 to-indigo-50",
+    bg: "bg-linear-to-br from-blue-50 to-cyan-50",
     border: "border-blue-200",
-    initial: "AT",
-    badgeBg: "bg-blue-500",
-    steps: ["Dial *100#", "Select 'Send Money'", "Enter the number above", "Enter amount & confirm"],
+    initial: "UMB",
+    badgeBg: "bg-blue-600",
+    steps: ["Visit any UMB branch", "Request to deposit to account 0371381804017", "Provide account name for verification", "Get your receipt"],
   },
 ];
 
@@ -78,16 +96,17 @@ function CopyButton({ text }: { text: string }) {
 export default function MoMoWidget() {
   const [activeNetwork, setActiveNetwork] = useState(0);
   const active = givingOptions[activeNetwork];
+  const isMomo = active.type === "momo";
 
   return (
     <div className="bg-white rounded-3xl border border-border shadow-lg overflow-hidden">
       {/* Network tabs */}
-      <div className="flex border-b border-border">
+      <div className="flex border-b border-border overflow-x-auto">
         {givingOptions.map((opt, i) => (
           <button
             key={opt.shortName}
             onClick={() => setActiveNetwork(i)}
-            className={`flex-1 py-4 px-3 text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-2 ${
+            className={`flex-1 min-w-25 py-4 px-3 text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-2 ${
               activeNetwork === i
                 ? "bg-white border-b-2 border-primary text-foreground"
                 : "bg-muted/50 text-muted-foreground hover:text-foreground"
@@ -109,8 +128,8 @@ export default function MoMoWidget() {
                 <Image
                   src={active.image}
                   alt={active.network}
-                  width={96}
-                  height={96}
+                  width={144}
+                  height={80}
                   quality={100}
                   priority
                   unoptimized
@@ -123,32 +142,72 @@ export default function MoMoWidget() {
               </div>
             )}
             <h3 className={`font-bold text-xl mb-1 ${active.textColor}`}>{active.network}</h3>
-            <p className="text-muted-foreground text-sm">Send your gift to the number below</p>
+            <p className="text-muted-foreground text-sm">
+              {isMomo ? "Send your gift to the number below" : "Bank transfer or cash deposit"}
+            </p>
           </div>
-          <div className="bg-white rounded-2xl border border-border p-4">
-            <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
-              Mobile Number
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-muted-foreground" />
-                <span className="font-bold text-foreground text-lg">{active.number}</span>
+
+          {/* Mobile Money Number */}
+          {isMomo && 'number' in active && active.number && (
+            <>
+              <div className="bg-white rounded-2xl border border-border p-4">
+                <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
+                  Mobile Number
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-bold text-foreground text-lg">{active.number}</span>
+                  </div>
+                  <CopyButton text={active.number} />
+                </div>
               </div>
-              <CopyButton text={active.number} />
-            </div>
-          </div>
-          <div className="bg-white rounded-2xl border border-border p-4">
-            <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
-              Account Name
-            </div>
-            <div className="flex items-center gap-2">
-              <Church className="w-4 h-4 text-muted-foreground" />
-              <span className="font-semibold text-foreground text-base">{active.momoname}</span>
-            </div>
-          </div>
-          <div className="bg-white/60 rounded-xl px-4 py-3 text-sm text-muted-foreground">
-            USSD shortcode: <span className="font-bold text-foreground">{active.ussdCode}</span>
-          </div>
+              <div className="bg-white rounded-2xl border border-border p-4">
+                <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
+                  Account Name
+                </div>
+                <div className="flex items-center gap-2">
+                  <Church className="w-4 h-4 text-muted-foreground" />
+                  <span className="font-semibold text-foreground text-base">{active.momoname}</span>
+                </div>
+              </div>
+              {active.ussdCode && (
+                <div className="bg-white/60 rounded-xl px-4 py-3 text-sm text-muted-foreground">
+                  USSD shortcode: <span className="font-bold text-foreground">{active.ussdCode}</span>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* Bank Account Number */}
+          {!isMomo && 'accountNumber' in active && active.accountNumber && (
+            <>
+              <div className="bg-white rounded-2xl border border-border p-4">
+                <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
+                  Account Number
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <CreditCard className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-bold text-foreground text-lg">{active.accountNumber}</span>
+                  </div>
+                  <CopyButton text={active.accountNumber} />
+                </div>
+              </div>
+              <div className="bg-white rounded-2xl border border-border p-4">
+                <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
+                  Account Name
+                </div>
+                <div className="flex items-center gap-2">
+                  <Building2 className="w-4 h-4 text-muted-foreground" />
+                  <span className="font-semibold text-foreground text-base">{active.accountName}</span>
+                </div>
+              </div>
+              <div className="bg-white/60 rounded-xl px-4 py-3 text-sm text-muted-foreground">
+                <span className="font-bold text-foreground">{active.network}</span> - All branches accepted
+              </div>
+            </>
+          )}
         </div>
 
         {/* Right: steps */}

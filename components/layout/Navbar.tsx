@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Flame } from "lucide-react";
+import Logo from "../ui/Logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -43,23 +44,21 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2 cursor-pointer"
           >
-            <div className="flex items-center justify-center w-9 h-9 rounded-full bg-linear-to-br from-primary to-orange-500 shadow-lg">
-              <Flame className="w-5 h-5 text-white" strokeWidth={2.5} />
-            </div>
+            <Logo />
             <div className="leading-tight">
               <div
                 className={`font-bold text-sm tracking-tight transition-colors ${
                   scrolled || isOpen ? "text-foreground" : "text-white"
                 }`}
               >
-                Wind & Fire
+                Wind & Fire A/G
               </div>
               <div
                 className={`text-[10px] tracking-widest uppercase transition-colors ${
                   scrolled || isOpen ? "text-muted-foreground" : "text-white/80"
                 }`}
               >
-                Assemblies of God
+                Tamale, Ghana
               </div>
             </div>
           </Link>

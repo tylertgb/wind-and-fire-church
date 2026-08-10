@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Flame, MapPin, Phone, Mail, Share2, MessageCircle, Clock, ArrowRight, PlayCircle } from "lucide-react";
+import Logo from "../ui/Logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -111,9 +112,7 @@ export default function Footer() {
             {/* Brand column */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2.5 mb-5">
-                <div className="w-10 h-10 rounded-full bg-linear-to-br from-primary to-orange-500 flex items-center justify-center shadow-lg shadow-primary/30">
-                  <Flame className="w-5 h-5 text-white" />
-                </div>
+                <Logo/>
                 <div>
                   <div className="font-bold text-sm tracking-tight text-white">Wind & Fire A/G</div>
                   <div className="text-[10px] tracking-widest uppercase text-white/40">Tamale, Ghana</div>
@@ -196,31 +195,38 @@ export default function Footer() {
                     <MapPin className="w-3.5 h-3.5 text-primary" />
                   </div>
                   <span className="text-sm text-white/50 leading-relaxed">
-                    King David Junction, 50 meters off the Kanvili – Tuunayili Road, Tamale, Ghana
+                    A6 Kanvili Kpawmo Street, NS-121-1688, Tamale, Ghana
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                     <Phone className="w-3.5 h-3.5 text-primary" />
                   </div>
-                  <span className="text-sm text-white/50">+233 XX XXX XXXX</span>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+233245953233" className="text-sm text-white/50 hover:text-white transition-colors cursor-pointer">
+                      0245 953 233
+                    </a>
+                    <a href="tel:+233245782327" className="text-sm text-white/50 hover:text-white transition-colors cursor-pointer">
+                      0245 782 327
+                    </a>
+                  </div>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                     <Mail className="w-3.5 h-3.5 text-primary" />
                   </div>
                   <a
-                    href="mailto:info@windandfire.org"
+                    href="mailto:lambonfant@gmail.com"
                     className="text-sm text-white/50 hover:text-white transition-colors cursor-pointer"
                   >
-                    info@windandfire.org
+                    lambonfant@gmail.com
                   </a>
                 </li>
               </ul>
 
               {/* Google Maps CTA */}
               <a
-                href="https://maps.google.com/?q=Kanvili+Tuunayili+Road+Tamale+Ghana"
+                href="https://maps.google.com/?q=A6+Kanvili+Kpawmo+Street+Tamale+Ghana"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-primary hover:underline cursor-pointer"
@@ -238,7 +244,7 @@ export default function Footer() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
               <p className="text-xs text-white/30">
-                &copy; {new Date().getFullYear()} Wind and Fire Assemblies of God, Tamale. All rights reserved.
+                &copy; {new Date().getFullYear()} Wind & Fire Assemblies of God, Tamale. All rights reserved.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
