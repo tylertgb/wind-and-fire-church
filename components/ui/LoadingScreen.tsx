@@ -73,7 +73,7 @@ export default function LoadingScreen() {
           <div className="text-white font-bold tracking-tight text-lg leading-none">
             Wind <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-primary">&amp;</span> Fire
           </div>
-          <div className="text-white/35 text-[10px] tracking-[0.3em] uppercase mt-1">
+          <div className="text-white/35 text-[9px] tracking-[0.3em] uppercase mt-1">
             Assemblies of God, Tamale
           </div>
         </motion.div>
