@@ -7,6 +7,7 @@ import {
   Users, Flame, ArrowLeft, MessageCircle,
 } from "lucide-react";
 import MoMoWidget from "@/components/pages/give/MoMoWidget";
+import Logo from "@/components/ui/Logo";
 
 const givingCategories = [
   { icon: Church, label: "Tithes", desc: "Your faithful 10% — the foundation of our covenant with God.", color: "bg-orange-50 text-orange-600" },
@@ -27,9 +28,7 @@ export default function GivePage() {
             <span className="hidden sm:block">Back to Home</span>
           </Link>
           <Link href="/" className="flex items-center gap-2.5 cursor-pointer">
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-primary to-orange-500 flex items-center justify-center shadow-md">
-              <Flame className="w-4 h-4 text-white" />
-            </div>
+           <Logo />
             <span className="font-bold text-sm text-foreground hidden sm:block">Wind & Fire A/G</span>
           </Link>
           <a

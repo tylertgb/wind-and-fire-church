@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { X, ZoomIn, Flame } from "lucide-react";
+import Logo from "@/components/ui/Logo";
 
 type Category = "All" | "Sunday Services" | "Events" | "Youth & Ministries" | "Baptisms";
 
@@ -187,11 +188,9 @@ export default function GalleryPage() {
               href="/"
               className="flex items-center gap-2 cursor-pointer"
             >
-              <div className="flex items-center justify-center w-9 h-9 rounded-full bg-linear-to-br from-primary to-orange-500 shadow-lg">
-                <Flame className="w-5 h-5 text-white" strokeWidth={2.5} />
-              </div>
+              <Logo />
               <div className="leading-tight">
-                <div className="font-bold text-sm tracking-tight text-foreground">Wind & Fire</div>
+                <div className="font-bold text-sm tracking-tight text-foreground">Wind & Fire A/G</div>
                 <div className="text-[10px] tracking-widest uppercase text-muted-foreground">Assemblies of God</div>
               </div>
             </Link>

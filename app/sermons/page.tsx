@@ -7,6 +7,7 @@ import {
   PlayCircle, Clock, Search, Radio, X, ChevronLeft,
   Tv, ExternalLink, Calendar, User, Flame,
 } from "lucide-react";
+import Logo from "@/components/ui/Logo";
 
 const ALL_SERMONS = [
   {
@@ -191,9 +192,7 @@ export default function SermonsPage() {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2.5 shrink-0 cursor-pointer">
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-primary to-orange-500 flex items-center justify-center shadow-md">
-              <Flame className="w-4 h-4 text-white" />
-            </div>
+            <Logo />
             <span className="font-bold text-sm text-foreground hidden sm:block">Wind & Fire A/G</span>
           </Link>
           <nav className="flex items-center gap-1 text-sm">
