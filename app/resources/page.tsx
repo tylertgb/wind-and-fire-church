@@ -67,8 +67,8 @@ export default function ResourcesPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-700 via-orange-600 to-amber-800 opacity-95" />
+      <section className="relative h-[70vh] min-h-150 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-amber-700 via-orange-600 to-amber-800 opacity-95" />
         <div className="absolute inset-0">
           <Image
             src="/slides/4.jpg"
@@ -132,9 +132,9 @@ export default function ResourcesPage() {
                 transition={{ duration: 0.4, delay: i * 0.02 }}
                 className="group"
               >
-                <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-gradient-to-br from-slate-100 to-slate-200 border-2 border-border group-hover:border-amber-600/30">
+                <div className="relative aspect-2/3 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-linear-to-br from-slate-100 to-slate-200 border-2 border-border group-hover:border-amber-600/30">
                   {/* Book placeholder with title */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-gradient-to-br from-amber-50 to-orange-50">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-linear-to-br from-amber-50 to-orange-50">
                     <BookOpen className="w-12 h-12 text-amber-600/20 mb-4" />
                     <h3 className="font-serif text-sm font-bold text-center text-foreground mb-2 line-clamp-3">
                       {book.title}
@@ -143,7 +143,7 @@ export default function ResourcesPage() {
                       {book.author}
                     </p>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-amber-600/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                  <div className="absolute inset-0 bg-linear-to-t from-amber-600/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
                     <span className="text-white text-xs font-semibold">View Details</span>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function ResourcesPage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="text-center p-8 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 shadow-sm"
+                className="text-center p-8 rounded-2xl bg-linear-to-br from-amber-50 to-orange-50 border border-amber-200 shadow-sm"
               >
                 <div className="text-5xl font-bold font-serif text-amber-700 mb-2">
                   {stat.value}
@@ -278,7 +278,7 @@ export default function ResourcesPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cat.color} flex items-center justify-center mb-4 shadow-md`}>
+                <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${cat.color} flex items-center justify-center mb-4 shadow-md`}>
                   <BookOpen className="w-7 h-7 text-white" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-serif text-xl font-bold text-foreground mb-4">
@@ -299,7 +299,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-br from-amber-600 to-orange-600">
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-amber-600 to-orange-600">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

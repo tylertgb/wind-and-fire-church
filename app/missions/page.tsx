@@ -629,7 +629,6 @@ export default function MissionsPage() {
                   "HIV completely healed",
                   "Hepatitis B and C healed",
                 ],
-                icon: "✨",
                 color: "from-violet-500 to-purple-600",
               },
               {
@@ -641,7 +640,6 @@ export default function MissionsPage() {
                   "Dead babies breathing again",
                   "Decades of madness overturned",
                 ],
-                icon: "👶",
                 color: "from-rose-500 to-pink-600",
               },
             ].map((category, i) => (
@@ -653,7 +651,6 @@ export default function MissionsPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-white rounded-3xl p-8 shadow-lg"
               >
-                <div className="text-4xl mb-4">{category.icon}</div>
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4 shadow-md`}>
                   <Sparkles className="w-7 h-7 text-white" strokeWidth={1.5} />
                 </div>

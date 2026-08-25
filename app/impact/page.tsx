@@ -188,7 +188,7 @@ export default function ImpactPage() {
 
       {/* Outreach Areas */}
       <section className="py-20 px-4 sm:px-6 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -214,7 +214,7 @@ export default function ImpactPage() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
               >
-                <div className="relative h-56">
+                <div className="relative h-74">
                   <Image
                     src={area.image}
                     alt={area.title}
@@ -509,7 +509,7 @@ export default function ImpactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl"
+              className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl"
             >
               <Image
                 src="/gallery/event-01.jpg"

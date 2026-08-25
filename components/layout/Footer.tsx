@@ -8,12 +8,17 @@ import Logo from "../ui/Logo";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/#about" },
-  { label: "Ministries", href: "/#ministries" },
-  { label: "Media", href: "/#media" },
+  { label: "History", href: "/history" },
+  { label: "Leadership", href: "/leadership" },
+  { label: "Pastor's Message", href: "/pastor-message" },
+  { label: "Ministries", href: "/ministries" },
+  { label: "Impact", href: "/impact" },
+  { label: "Missions", href: "/missions" },
+  { label: "Events", href: "/events" },
   { label: "Sermons", href: "/sermons" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Resources", href: "/resources" },
   { label: "Give", href: "/give" },
-  { label: "Prayer Request", href: "/#prayer" },
   { label: "I'm New", href: "/#visitor" },
 ];
 
@@ -119,8 +124,8 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-sm text-white/50 leading-relaxed mb-6">
-                A Spirit-filled Pentecostal community in the heart of Tamale empowering lives
-                through faith, prayer, and the power of the Holy Spirit.
+                A Spirit-filled Pentecostal community in the heart of Tamale, celebrating over 10 years 
+                of empowering lives through faith, prayer, and the power of the Holy Spirit.
               </p>
 
               {/* Social links */}

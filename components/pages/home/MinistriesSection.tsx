@@ -270,26 +270,50 @@ export default function MinistriesSection() {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA - Updated with link to full ministries page */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 text-center"
+          className="mt-12"
         >
-          <p className="text-muted-foreground text-sm mb-4">
-            Not sure where to start? Our Welcome Desk team will help you find your fit.
-          </p>
-          <button
-            onClick={() => {
-              const el = document.querySelector("#visitor");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-white font-semibold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 cursor-pointer"
-          >
-            Talk to Us
-          </button>
+          {/* More ministries callout */}
+          <div className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 border border-primary/10 mb-6">
+            <div className="text-center max-w-2xl mx-auto">
+              <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
+                20+ Service Units & Counting
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Beyond these core ministries, Wind & Fire has <strong className="text-primary">20 service units</strong>, 
+                a thriving <strong className="text-accent">Radio & TV Ministry</strong> broadcasting across Northern Ghana, 
+                and <strong className="text-foreground">170+ ministers</strong> trained through our mentorship programs.
+              </p>
+              <a
+                href="/ministries"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-white font-semibold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/30 cursor-pointer"
+              >
+                Explore All Ministries
+                <ChevronRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* Original CTA */}
+          <div className="text-center">
+            <p className="text-muted-foreground text-sm mb-4">
+              Not sure where to start? Our Welcome Desk team will help you find your fit.
+            </p>
+            <button
+              onClick={() => {
+                const el = document.querySelector("#visitor");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-all cursor-pointer"
+            >
+              Talk to Us
+            </button>
+          </div>
         </motion.div>
       </div>
 

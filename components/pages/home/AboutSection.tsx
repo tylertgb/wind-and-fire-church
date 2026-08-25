@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { BookOpen, Flame, Wind, Target, Eye, Heart, ArrowRight } from "lucide-react";
+import { BookOpen, Flame, Wind, Target, Eye, Heart, ArrowRight, Church, Users, Sparkles, Globe, Camera, Home, Gift, Coffee, ShoppingBag, Shield } from "lucide-react";
 
 const stats = [
   { value: "1000+", label: "Congregation Members", color: "text-primary" },
@@ -323,7 +323,7 @@ export default function AboutSection() {
                     priority
                     className="w-full h-full object-cover"
                   />
-                  {/* Gradient overlay at bottom */}
+                  {/* linear overlay at bottom */}
                   <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/60 to-transparent" />
                 </div>
 
@@ -395,6 +395,140 @@ export default function AboutSection() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* ── PART 5: Church Facilities ── */}
+      <div className="py-20 px-4 sm:px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-600/10 text-emerald-700 text-xs font-semibold tracking-widest uppercase mb-4">
+              <Church className="w-3.5 h-3.5" />
+              Our Facilities
+            </div>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-3">
+              State-of-the-Art Church Complex
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A multi-purpose facility built by God's grace without bank loans, seating several thousands
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <div className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/slides/4.jpg"
+                  alt="Church Building"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="space-y-6"
+            >
+              <div className="bg-linear-to-br from-emerald-50 to-green-50 rounded-3xl p-8 border border-emerald-200">
+                <h4 className="font-serif text-xl font-bold text-foreground mb-4">
+                  Main Church Complex
+                </h4>
+                <div className="space-y-3">
+                  {[
+                    { label: "Total Floor Area", value: "4,200m²" },
+                    { label: "Main Auditorium", value: "Multi-thousand seating" },
+                    { label: "Additional Chapels", value: "4 specialized spaces" },
+                    { label: "Hostel Facility", value: "80-bed capacity" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex justify-between items-center py-2 border-b border-emerald-200 last:border-0">
+                      <span className="text-sm text-muted-foreground">{item.label}</span>
+                      <span className="text-sm font-semibold text-foreground">{item.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: Users, label: "Teen's Church", subtitle: "Mountain of Mantles" },
+                  { icon: Heart, label: "Children's Chapel", subtitle: "Celestial City" },
+                  { icon: Sparkles, label: "Second Chapel", subtitle: "Children's second chapel" },
+                  { icon: Globe, label: "City of Wonders", subtitle: "Destiny Arena" },
+                ].map((chapel, i) => (
+                  <div
+                    key={i}
+                    className="bg-white rounded-2xl p-5 border border-border shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <chapel.icon className="w-8 h-8 text-emerald-600 mb-3" />
+                    <div className="text-sm font-semibold text-foreground mb-1">{chapel.label}</div>
+                    <div className="text-xs text-muted-foreground">{chapel.subtitle}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Additional Facilities */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
+          >
+            {[
+              { icon: Camera, label: "Master Control Room", subtitle: "Broadcasting" },
+              { icon: Home, label: "Pastoral Suite", subtitle: "4-bed facility" },
+              { icon: Users, label: "Executive Lounge", subtitle: "Pastoral lounge" },
+              { icon: Heart, label: "Administrative Block", subtitle: "9 offices" },
+              { icon: Gift, label: "Restaurant", subtitle: "40-seater facility" },
+              { icon: Coffee, label: "Coffee Shop", subtitle: "Refreshments" },
+              { icon: ShoppingBag, label: "Mini Market", subtitle: "Convenience store" },
+              { icon: Shield, label: "Security Post", subtitle: "24/7 protection" },
+            ].map((facility, i) => (
+              <div
+                key={i}
+                className="bg-linear-to-br from-slate-50 to-white rounded-2xl p-6 border border-border text-center hover:shadow-lg transition-shadow"
+              >
+                <facility.icon className="w-10 h-10 text-emerald-600 mx-auto mb-3" />
+                <div className="text-sm font-semibold text-foreground mb-1">{facility.label}</div>
+                <div className="text-xs text-muted-foreground">{facility.subtitle}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Built Without Loans */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-12 bg-linear-to-br from-emerald-600 to-green-600 text-white rounded-3xl p-8 sm:p-12 text-center shadow-2xl"
+          >
+            <Sparkles className="w-16 h-16 mx-auto mb-6" />
+            <h4 className="font-serif text-3xl font-bold mb-4">
+              Built by Faith, Not by Loans
+            </h4>
+            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+              By God's Grace, this facility has been built <strong>without a loan from any bank</strong>. 
+              What more can we say? Our history is his story. To God alone be all the glory!!
+            </p>
+          </motion.div>
         </div>
       </div>
 

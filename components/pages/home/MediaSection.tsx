@@ -298,6 +298,61 @@ export default function MediaSection() {
             </motion.div>
           </AnimatePresence>
 
+          {/* Radio & TV Ministry Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 mb-12"
+          >
+            <div className="bg-gradient-to-br from-accent via-primary to-violet-600 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold tracking-widest uppercase mb-4">
+                    <Radio className="w-3.5 h-3.5" />
+                    Radio & TV Ministry
+                  </div>
+                  <h3 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+                    Wisdom & Power Encounter
+                  </h3>
+                  <p className="text-white/90 text-lg mb-2">
+                    <strong>Every Saturday • 6:30 PM</strong>
+                  </p>
+                  <p className="text-white/80 mb-6">
+                    Broadcasting across <strong className="text-yellow-300">7+ radio stations</strong> in Northern Ghana 
+                    with <strong className="text-yellow-300">96+ weekly broadcasts</strong>, reaching millions with the gospel.
+                  </p>
+                  <a
+                    href="/ministries"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-accent font-semibold text-sm hover:bg-white/90 transition-all cursor-pointer"
+                  >
+                    Learn More About Our Media Ministry
+                    <ChevronRight className="w-4 h-4" />
+                  </a>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+                    <div className="text-4xl font-bold font-serif mb-1">96+</div>
+                    <div className="text-sm text-white/80">Weekly Broadcasts</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+                    <div className="text-4xl font-bold font-serif mb-1">7+</div>
+                    <div className="text-sm text-white/80">Radio Stations</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+                    <div className="text-4xl font-bold font-serif mb-1">10</div>
+                    <div className="text-sm text-white/80">Years Broadcasting</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+                    <div className="text-4xl font-bold font-serif mb-1">1M+</div>
+                    <div className="text-sm text-white/80">Lives Reached</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0 }}

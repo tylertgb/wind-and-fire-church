@@ -12,8 +12,8 @@ export default function LeadershipPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent via-primary to-violet-700 opacity-95" />
+      <section className="relative h-[60vh] min-h-125 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-accent via-primary to-violet-700 opacity-95" />
         <div className="absolute inset-0">
           <Image
             src="/slides/3.jpg"
@@ -70,7 +70,7 @@ export default function LeadershipPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-4xl mx-auto bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 border border-primary/10 text-center"
+            className="max-w-4xl mx-auto bg-linear-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 border border-primary/10 text-center"
           >
             <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 shadow-2xl shadow-primary/30 ring-4 ring-white">
               <Image
@@ -96,7 +96,7 @@ export default function LeadershipPage() {
       </section>
 
       {/* Church Board */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-br from-accent/5 to-primary/5">
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-accent/5 to-primary/5">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ export default function LeadershipPage() {
               height={600}
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
               <p className="text-sm font-semibold opacity-90">
                 Our dedicated board members provide wisdom, accountability, and leadership to guide the church in fulfilling its mission
@@ -178,14 +178,14 @@ export default function LeadershipPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
               >
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-4/3">
                   <Image
                     src={counsellor.image}
                     alt={counsellor.label}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="px-3 py-1 rounded-full bg-rose-600/90 text-white text-xs font-semibold inline-block mb-2">
                       {counsellor.label}
@@ -301,7 +301,7 @@ export default function LeadershipPage() {
               height={600}
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8 text-white">
               <h3 className="font-serif text-2xl font-bold mb-2">
                 Foundation Builders
@@ -311,6 +311,108 @@ export default function LeadershipPage() {
                 that have enabled Wind & Fire to grow into the thriving ministry it is today.
               </p>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* First Family Section */}
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-cyan-50 to-blue-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-600/10 text-cyan-700 text-xs font-semibold tracking-widest uppercase mb-4">
+              <Heart className="w-3.5 h-3.5" />
+              Our First Family
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Rev. & Mrs. Fant and Family
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Rev. Aaron Lambon Fant, his wife Ernestina Fant, and their children Sherah, Tamarbe, and Yennuom
+            </p>
+          </motion.div>
+
+          {/* Main Family Photo */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mb-8"
+          >
+            <div className="relative aspect-16/10 rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/leadership/fantfamily.png"
+                alt="First Family - Rev. Aaron Lambon Fant and Family"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 text-white">
+                <h3 className="font-serif text-3xl font-bold mb-2">The Fant Family</h3>
+                <p className="text-white/90 text-lg">
+                  Leading with love, faith, and dedication
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Family Photo Gallery */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { src: "/members/1.jpg", label: "Family Moments" },
+              { src: "/members/2.jpg", label: "Ministry Together" },
+              { src: "/members/3.jpg", label: "Celebration" },
+              { src: "/members/4.jpg", label: "Blessed Family" },
+              { src: "/gallery/baptism-01.jpg", label: "Special Occasions" },
+              { src: "/gallery/baptism-02.jpg", label: "Family Time" },
+              { src: "/gallery/event-01.jpg", label: "Church Events" },
+              { src: "/gallery/event-02.jpg", label: "Together in Ministry" },
+            ].map((photo, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group cursor-pointer"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.label}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white translate-y-full group-hover:translate-y-0 transition-transform">
+                  <p className="text-sm font-semibold">{photo.label}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Family Tribute */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-12 bg-white rounded-3xl p-8 sm:p-12 shadow-lg text-center"
+          >
+            <Heart className="w-12 h-12 text-cyan-600 mx-auto mb-6" />
+            <blockquote className="text-lg text-muted-foreground italic leading-relaxed max-w-3xl mx-auto">
+              "Last but not the least, I want to sincerely appreciate my beautiful wife for standing with me through 
+              thick and thin, others can only imagine it but you feel and know what we have been through. My love to you, 
+              Sherah, Tamarbe and Yennuom."
+            </blockquote>
+            <p className="mt-6 text-sm font-semibold text-cyan-600">
+              — Rev. Aaron Lambon Fant
+            </p>
           </motion.div>
         </div>
       </section>

@@ -11,11 +11,11 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "History", href: "/history" },
   { label: "Leadership", href: "/leadership" },
+  { label: "Pastor's Message", href: "/pastor-message" },
   { label: "Ministries", href: "/ministries" },
   { label: "Impact", href: "/impact" },
   { label: "Missions", href: "/missions" },
   { label: "Events", href: "/events" },
-  { label: "Resources", href: "/resources" },
   { label: "Give", href: "/give" },
 ];
 
