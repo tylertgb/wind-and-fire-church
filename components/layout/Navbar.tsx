@@ -8,11 +8,14 @@ import Logo from "../ui/Logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "#about" },
-  { label: "Ministries", href: "#ministries" },
-  { label: "Sermons", href: "/sermons" },
-  { label: "Media", href: "#media" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "About", href: "#about" },
+  { label: "History", href: "/history" },
+  { label: "Leadership", href: "/leadership" },
+  { label: "Ministries", href: "/ministries" },
+  { label: "Impact", href: "/impact" },
+  { label: "Missions", href: "/missions" },
+  { label: "Events", href: "/events" },
+  { label: "Resources", href: "/resources" },
   { label: "Give", href: "/give" },
 ];
 

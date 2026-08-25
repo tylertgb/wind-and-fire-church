@@ -13,30 +13,37 @@ const stats = [
 
 const values = [
   {
-    icon: Flame,
-    title: "Spirit-Filled Worship",
-    description: "We pursue the genuine presence of God in every gathering — not performance, but encounter.",
+    icon: BookOpen,
+    title: "Truth",
+    description: "We stand firmly on the unchanging Word of God as the foundation of all we believe and teach.",
     color: "from-primary to-orange-500",
     bg: "bg-orange-50",
   },
   {
-    icon: BookOpen,
-    title: "Word-Centred Teaching",
-    description: "Every sermon is rooted in Scripture — practical, powerful, and life-transforming.",
+    icon: Heart,
+    title: "Purity",
+    description: "We pursue holiness and righteousness in our personal lives, ministries, and church culture.",
     color: "from-accent to-blue-700",
     bg: "bg-blue-50",
   },
   {
+    icon: Target,
+    title: "Excellence",
+    description: "We honor God by giving our very best in worship, service, and everything we do for His kingdom.",
+    color: "from-violet-500 to-purple-600",
+    bg: "bg-violet-50",
+  },
+  {
     icon: Heart,
-    title: "Radical Hospitality",
-    description: "Whoever you are, wherever you come from — you will find a warm home at Wind & Fire.",
+    title: "Relationships",
+    description: "We prioritize genuine connections, community, and love — reflecting the heart of Christ to one another.",
     color: "from-rose-500 to-pink-600",
     bg: "bg-rose-50",
   },
   {
-    icon: Wind,
-    title: "Community Impact",
-    description: "We are deeply invested in the welfare of Tamale — spiritually, socially, and economically.",
+    icon: Flame,
+    title: "Worship",
+    description: "We pursue the genuine presence of God in Spirit-filled worship that glorifies Him in every gathering.",
     color: "from-teal-500 to-emerald-600",
     bg: "bg-emerald-50",
   },
@@ -138,22 +145,22 @@ export default function AboutSection() {
                 God that purifies, transforms, and ignites passion for Christ in every believer.
               </p>
 
-              {/* Mission & Vision */}
+              {/* Vision & Mission */}
               <div className="grid grid-cols-1 gap-4 pt-2">
                 {[
                   {
-                    icon: Target,
-                    label: "Our Mission",
-                    text: "To make disciples of Jesus Christ who transform Tamale and beyond.",
-                    color: "text-primary",
-                    bg: "bg-primary/5",
-                  },
-                  {
                     icon: Eye,
-                    label: "Our Vision",
-                    text: "A Spirit-empowered church that leaves no soul untouched in Northern Ghana.",
+                    label: "Vision Statement",
+                    text: "To be a twenty first century apostolic model Church that will primarily seek to establish the rule of God in every heart especially within the three northern regions.",
                     color: "text-accent",
                     bg: "bg-accent/5",
+                  },
+                  {
+                    icon: Target,
+                    label: "Mission Statement",
+                    text: "To establish a centre of light, teaching and demonstrating God's wisdom and power, and raising an army of high-powered, un-ashamed, spiritual and intellectual ministers with one driving passion to depopulate hell and flood heaven with souls.",
+                    color: "text-primary",
+                    bg: "bg-primary/5",
                   },
                 ].map((item) => (
                   <div key={item.label} className={`flex gap-4 p-4 rounded-2xl ${item.bg}`}>
@@ -162,10 +169,24 @@ export default function AboutSection() {
                     </div>
                     <div>
                       <div className={`font-semibold text-sm ${item.color} mb-0.5`}>{item.label}</div>
-                      <div className="text-sm text-muted-foreground">{item.text}</div>
+                      <div className="text-sm text-muted-foreground leading-relaxed">{item.text}</div>
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Slogan */}
+              <div className="mt-6 p-5 rounded-2xl bg-linear-to-br from-primary/10 via-accent/5 to-primary/5 border border-primary/20">
+                <div className="flex items-center gap-3 mb-2">
+                  <Wind className="w-5 h-5 text-primary" />
+                  <Flame className="w-5 h-5 text-accent" />
+                </div>
+                <div className="font-serif text-lg font-bold text-foreground mb-1">
+                  Sanctuary of Wind & Fire
+                </div>
+                <div className="text-sm text-primary font-semibold">
+                  Movers of God, Removers of Mountains
+                </div>
               </div>
             </motion.div>
           </div>
@@ -206,13 +227,13 @@ export default function AboutSection() {
             className="text-center mb-12"
           >
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-3">
-              What We Stand For
+              Core Values
             </h3>
             <p className="text-muted-foreground max-w-lg mx-auto">
-              Four pillars define everything we do as a church family.
+              Truth | Purity | Excellence | Relationships | Worship
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {values.map((v, i) => (
               <motion.div
                 key={v.title}
@@ -303,7 +324,7 @@ export default function AboutSection() {
                     className="w-full h-full object-cover"
                   />
                   {/* Gradient overlay at bottom */}
-                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/60 to-transparent" />
                 </div>
 
                 {/* Right column - Message */}
