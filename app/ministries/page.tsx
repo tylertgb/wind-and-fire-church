@@ -11,7 +11,7 @@ import {
 
 const ministryUnits = [
   { name: "Missions", image: "/gallery/ministry-01.jpg", icon: Users, color: "from-primary to-orange-500" },
-  { name: "Women Ministry", image: "/gallery/ministry-02.jpg", icon: Heart, color: "from-rose-500 to-pink-600" },
+  { name: "Women's Ministry", image: "/gallery/ministry-02.jpg", icon: Heart, color: "from-rose-500 to-pink-600" },
   { name: "Cherubs of Praise", image: "/gallery/ministry-03.jpg", icon: Music, color: "from-violet-500 to-purple-600" },
   { name: "Melodies of Heaven", image: "/gallery/ministry-04.jpg", icon: Music, color: "from-accent to-blue-600" },
   { name: "Media Unit", image: "/gallery/ministry-05.jpg", icon: Camera, color: "from-teal-500 to-cyan-600" },
@@ -23,11 +23,9 @@ const ministryUnits = [
   { name: "Fire Kids Teachers", image: "/gallery/event-03.jpg", icon: Baby, color: "from-pink-500 to-rose-500" },
   { name: "Ushers", image: "/gallery/sunday-01.jpg", icon: Users, color: "from-primary to-accent" },
   { name: "Ministering Angels", image: "/gallery/sunday-02.jpg", icon: Sparkles, color: "from-violet-600 to-purple-700" },
-  { name: "Amnation Team", image: "/gallery/sunday-03.jpg", icon: Users, color: "from-teal-600 to-emerald-600" },
-  { name: "Women's Ministry", image: "/gallery/sunday-04.jpg", icon: Heart, color: "from-rose-500 to-pink-500" },
+  { name: "Amaraba Team", image: "/gallery/sunday-03.jpg", icon: Users, color: "from-teal-600 to-emerald-600" },
   { name: "Care Unit", image: "/gallery/sunday-05.jpg", icon: Heart, color: "from-emerald-600 to-green-700" },
   { name: "Levites", image: "/gallery/sunday-06.jpg", icon: Music, color: "from-accent to-blue-700" },
-  { name: "Ministering Angels", image: "/gallery/sunday-07.jpg", icon: Gift, color: "from-violet-500 to-purple-600" },
 ];
 
 export default function MinistriesPage() {
@@ -36,8 +34,8 @@ export default function MinistriesPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-700 via-primary to-accent opacity-95" />
+      <section className="relative h-[70vh] min-h-100 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-violet-700 via-primary to-accent opacity-95" />
         <div className="absolute inset-0">
           <Image
             src="/slides/2.jpg"
@@ -53,15 +51,15 @@ export default function MinistriesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block mb-6">
-              <div className="text-5xl sm:text-6xl font-bold font-serif mb-3 text-white/90">
+            <div className="inline-block mb-4 sm:mb-6">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif mb-2 sm:mb-3 text-white/90">
                 Our History is His Story
               </div>
-              <div className="text-7xl sm:text-8xl font-bold font-serif text-yellow-300">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-yellow-300">
                 SERVICE IN<br />THE CHURCH
               </div>
             </div>
-            <p className="text-xl sm:text-2xl text-white/90 mt-8 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mt-4 sm:mt-6 md:mt-4 max-w-3xl mx-auto">
               20 Service Units providing avenues for members to serve the Lord
             </p>
           </motion.div>
@@ -100,17 +98,17 @@ export default function MinistriesPage() {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className="group relative"
               >
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                <div className="relative aspect-3/4 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                   <Image
                     src={unit.image}
                     alt={unit.name}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
                   
                   {/* Icon */}
-                  <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl bg-gradient-to-br ${unit.color} flex items-center justify-center shadow-lg`}>
+                  <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl bg-linear-to-br ${unit.color} flex items-center justify-center shadow-lg`}>
                     <unit.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
 
@@ -131,7 +129,7 @@ export default function MinistriesPage() {
       </section>
 
       {/* Radio & TV Ministry */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-br from-accent/10 to-primary/10">
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-accent/10 to-primary/10">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,7 +156,7 @@ export default function MinistriesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl"
+              className="relative aspect-3/4 rounded-3xl overflow-hidden shadow-2xl"
             >
               <Image
                 src="/leadership/fant-sm.png"
@@ -166,7 +164,7 @@ export default function MinistriesPage() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/40 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-accent/90 via-accent/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <div className="text-sm font-bold uppercase tracking-widest mb-2 text-yellow-300">
                   Wisdom & Power Encounter
@@ -218,7 +216,7 @@ export default function MinistriesPage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-accent to-primary text-white rounded-3xl p-8 shadow-lg">
+              <div className="bg-linear-to-br from-accent to-primary text-white rounded-3xl p-8 shadow-lg">
                 <h4 className="font-serif text-xl font-bold mb-3">
                   Impact Stats
                 </h4>
@@ -268,7 +266,7 @@ export default function MinistriesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center p-8 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 border border-accent/20 shadow-sm hover:shadow-lg transition-shadow"
+                className="text-center p-8 rounded-2xl bg-linear-to-br from-cyan-50 to-blue-50 border border-accent/20 shadow-sm hover:shadow-lg transition-shadow"
               >
                 <div className="text-5xl font-bold font-serif text-accent mb-2">
                   {stat.value}
@@ -288,7 +286,7 @@ export default function MinistriesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 sm:p-12 border border-primary/10"
+            className="bg-linear-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 sm:p-12 border border-primary/10"
           >
             <div className="max-w-4xl mx-auto">
               <h3 className="font-serif text-2xl font-bold text-foreground mb-4 text-center">

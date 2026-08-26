@@ -12,8 +12,8 @@ export default function HistoryPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary opacity-95" />
+      <section className="relative h-[60vh] min-h-100 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-primary via-accent to-primary opacity-95" />
         <div className="absolute inset-0">
           <Image
             src="/slides/4.jpg"
@@ -29,15 +29,15 @@ export default function HistoryPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-serif text-5xl sm:text-6xl font-bold mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
               Our History is His Story
             </h1>
-            <p className="text-xl sm:text-2xl text-white/90 font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-light">
               A decade of faith, growth, and transformation
             </p>
-            <div className="flex items-center justify-center gap-3 mt-8">
-              <Calendar className="w-6 h-6" />
-              <span className="text-lg font-semibold">February 5, 2012 - Present</span>
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <span className="text-sm sm:text-base md:text-lg font-semibold">February 5, 2012 - Present</span>
             </div>
           </motion.div>
         </div>
@@ -224,7 +224,7 @@ export default function HistoryPage() {
 
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-8 top-2 bottom-2 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/20" />
+            <div className="absolute left-8 top-2 bottom-2 w-0.5 bg-linear-to-b from-primary via-accent to-primary/20" />
 
             <div className="space-y-12">
               {[
@@ -272,7 +272,7 @@ export default function HistoryPage() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="flex gap-6 items-start relative"
                 >
-                  <div className={`shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${
+                  <div className={`shrink-0 w-16 h-16 rounded-full bg-linear-to-br ${
                     milestone.color === 'primary' ? 'from-primary to-orange-500' : 'from-accent to-blue-600'
                   } flex items-center justify-center shadow-lg z-10`}>
                     <milestone.icon className="w-7 h-7 text-white" />

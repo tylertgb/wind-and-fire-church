@@ -12,7 +12,7 @@ export default function PastorMessagePage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-125 flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-100 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-primary via-accent to-primary opacity-95" />
         <div className="absolute inset-0">
           <Image
@@ -29,14 +29,14 @@ export default function PastorMessagePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold mb-6">
-              <Heart className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+              <Heart className="w-3 h-3 sm:w-4 sm:h-4" />
               A Word from Our Pastor
             </div>
-            <h1 className="font-serif text-5xl sm:text-6xl font-bold mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
               Head Pastor's Address
             </h1>
-            <p className="text-xl sm:text-2xl text-white/90 font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-light">
               Rev. Aaron Lambon Fant
             </p>
           </motion.div>

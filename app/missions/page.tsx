@@ -38,8 +38,8 @@ export default function MissionsPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent via-primary to-accent opacity-95" />
+      <section className="relative h-[60vh] min-h-100 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-accent via-primary to-accent opacity-95" />
         <div className="absolute inset-0">
           <Image
             src="/slides/6.jpg"
@@ -55,15 +55,15 @@ export default function MissionsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block mb-6">
-              <div className="text-5xl sm:text-6xl font-bold font-serif mb-3">
+            <div className="inline-block mb-4 sm:mb-6">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif mb-2 sm:mb-3">
                 Our History is His Story
               </div>
-              <div className="text-7xl sm:text-8xl font-bold font-serif text-yellow-300">
-                PLANTING OVER A<br />100 CHURCHES
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-yellow-300">
+                PLANTING OVER A<br className="hidden sm:block" /> 100 CHURCHES
               </div>
             </div>
-            <p className="text-xl sm:text-2xl text-white/90 mt-8 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mt-4 sm:mt-6 md:mt-8 max-w-3xl mx-auto">
               Missions has always been the heartbeat of the ministry
             </p>
           </motion.div>
@@ -96,9 +96,9 @@ export default function MissionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center p-8 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-border shadow-sm hover:shadow-lg transition-shadow"
+                className="text-center p-8 rounded-2xl bg-linear-to-br from-slate-50 to-white border border-border shadow-sm hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <stat.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                 </div>
                 <div className="text-4xl font-bold font-serif text-foreground mb-2">
@@ -120,7 +120,7 @@ export default function MissionsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 sm:p-12 border border-primary/10"
+            className="bg-linear-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 sm:p-12 border border-primary/10"
           >
             <div className="max-w-4xl mx-auto text-center">
               <Globe className="w-12 h-12 text-primary mx-auto mb-6" />
@@ -226,7 +226,7 @@ export default function MissionsPage() {
       </section>
 
       {/* Medical Missions */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-br from-teal-50 to-cyan-50">
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-teal-50 to-cyan-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -282,7 +282,7 @@ export default function MissionsPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="bg-gradient-to-br from-teal-600 to-cyan-600 rounded-3xl p-8 text-white shadow-lg"
+              className="bg-linear-to-br from-teal-600 to-cyan-600 rounded-3xl p-8 text-white shadow-lg"
             >
               <Heart className="w-12 h-12 mb-4" />
               <h3 className="font-serif text-2xl font-bold mb-4">
@@ -391,7 +391,7 @@ export default function MissionsPage() {
       </section>
 
       {/* Reaching Out to Royals */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-br from-amber-50 to-yellow-50">
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-amber-50 to-yellow-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -516,10 +516,10 @@ export default function MissionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-linear-to-br from-slate-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="text-5xl mb-4">{mission.flag}</div>
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${mission.color} flex items-center justify-center mb-4 shadow-md`}>
+                <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${mission.color} flex items-center justify-center mb-4 shadow-md`}>
                   <mission.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
@@ -541,7 +541,7 @@ export default function MissionsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 sm:p-12 border border-primary/10 mb-12"
+            className="bg-linear-to-br from-primary/5 via-accent/5 to-primary/5 rounded-3xl p-8 sm:p-12 border border-primary/10 mb-12"
           >
             <div className="max-w-4xl mx-auto">
               <Globe className="w-12 h-12 text-primary mx-auto mb-6" />
@@ -599,7 +599,7 @@ export default function MissionsPage() {
       </section>
 
       {/* Miracles & Testimonies */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-br from-violet-50 to-purple-50">
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-violet-50 to-purple-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -651,7 +651,7 @@ export default function MissionsPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-white rounded-3xl p-8 shadow-lg"
               >
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4 shadow-md`}>
+                <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${category.color} flex items-center justify-center mb-4 shadow-md`}>
                   <Sparkles className="w-7 h-7 text-white" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
@@ -690,7 +690,7 @@ export default function MissionsPage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
                   <span className="text-white text-xs font-semibold">Testimony of God's Power</span>
                 </div>
               </div>

@@ -45,14 +45,14 @@ export default function EventsPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-800 via-primary to-violet-900 opacity-95" />
+      <section className="relative h-[70vh] min-h-100 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-violet-800 via-primary to-violet-900 opacity-95" />
         <div className="absolute inset-0">
           <Image
             src="/slides/1.jpg"
             alt="Church Events"
             fill
-            className="object-cover mix-blend-overlay opacity-20"
+            className="object-cover mix-blend-overlay opacity-50"
           />
         </div>
         
@@ -62,15 +62,15 @@ export default function EventsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block mb-6">
-              <div className="text-5xl sm:text-6xl font-bold font-serif mb-3 text-white/90">
+            <div className="inline-block mb-4 sm:mb-6">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif mb-2 sm:mb-3 text-white/90">
                 Our History is His Story
               </div>
-              <div className="text-7xl sm:text-8xl font-bold font-serif text-yellow-300">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-yellow-300">
                 IMPACTFUL<br />CONFERENCES
               </div>
             </div>
-            <p className="text-xl sm:text-2xl text-white/90 mt-8 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mt-4 sm:mt-6 md:mt-4 max-w-3xl mx-auto">
               Well-patronized annual conferences that transform lives and communities
             </p>
           </motion.div>
@@ -109,8 +109,8 @@ export default function EventsPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group relative"
               >
-                <div className="bg-gradient-to-br from-slate-50 to-white rounded-3xl p-8 border-2 border-border hover:border-primary/30 transition-all shadow-sm hover:shadow-xl">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${conf.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
+                <div className="bg-linear-to-br from-slate-50 to-white rounded-3xl p-8 border-2 border-border hover:border-primary/30 transition-all shadow-sm hover:shadow-xl">
+                  <div className={`w-16 h-16 rounded-2xl bg-linear-to-br ${conf.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
                     <conf.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
@@ -167,7 +167,7 @@ export default function EventsPage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
           </div>
@@ -175,7 +175,7 @@ export default function EventsPage() {
       </section>
 
       {/* Mass Evangelism */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="py-20 px-4 sm:px-6 bg-linear-to-br from-primary/5 to-accent/5">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ export default function EventsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary to-accent text-white rounded-3xl p-8 sm:p-12 text-center shadow-2xl"
+            className="bg-linear-to-br from-primary to-accent text-white rounded-3xl p-8 sm:p-12 text-center shadow-2xl"
           >
             <Sparkles className="w-16 h-16 mx-auto mb-6" />
             <h3 className="font-serif text-3xl font-bold mb-4">
@@ -314,7 +314,7 @@ export default function EventsPage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
           </div>

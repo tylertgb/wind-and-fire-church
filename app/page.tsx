@@ -7,17 +7,28 @@ import GiveSection from "@/components/pages/home/GiveSection";
 import MediaSection from "@/components/pages/home/MediaSection";
 import MinistriesSection from "@/components/pages/home/MinistriesSection";
 import Navbar from "@/components/layout/Navbar";
+import SideNav from "@/components/layout/SideNav";
 import PrayerSection from "@/components/pages/home/PrayerSection";
 import QuickActions from "@/components/pages/home/QuickActions";
 import ScheduleSection from "@/components/pages/home/ScheduleSection";
 import VisitorSection from "@/components/pages/home/VisitorSection";
 import HeroSlider from "@/components/pages/home/HeroSlider";
 import FaithCross from "@/components/ui/FaithCross";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
+      <SideNav scrolled={scrolled} />
       <HeroSlider/>
       <FaithCross />
       {/* <HeroSection /> */}

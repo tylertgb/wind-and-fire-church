@@ -225,7 +225,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap gap-2 justify-center">
           {categories.map((cat) => (
             <button

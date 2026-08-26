@@ -67,7 +67,7 @@ export default function ResourcesPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-150 flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-100 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-amber-700 via-orange-600 to-amber-800 opacity-95" />
         <div className="absolute inset-0">
           <Image
@@ -84,15 +84,15 @@ export default function ResourcesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block mb-6">
-              <div className="text-5xl sm:text-6xl font-bold font-serif mb-3 text-white/90">
+            <div className="inline-block mb-4 sm:mb-6">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif mb-2 sm:mb-3 text-white/90">
                 Our History is His Story
               </div>
-              <div className="text-7xl sm:text-8xl font-bold font-serif text-yellow-300">
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-yellow-300">
                 LITERATURE IN<br />MINISTRY
               </div>
             </div>
-            <p className="text-xl sm:text-2xl text-white/90 mt-8 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mt-4 sm:mt-6 md:mt-8 max-w-3xl mx-auto">
               Ten years of authoring transformative books and teaching materials
             </p>
           </motion.div>
