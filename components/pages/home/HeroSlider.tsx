@@ -55,15 +55,16 @@ export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
+  const [bgVideoPlaying, setBgVideoPlaying] = useState(false);
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
 
   useEffect(() => {
-    if (paused || videoOpen) return;
+    if (paused || videoOpen || bgVideoPlaying) return;
     const id = setInterval(next, INTERVAL);
     return () => clearInterval(id);
-  }, [paused, videoOpen, next]);
+  }, [paused, videoOpen, bgVideoPlaying, next]);
 
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -79,8 +80,31 @@ export default function HeroSlider() {
       onMouseLeave={() => setPaused(false)}
     >
 
+      {/* ── BACKGROUND VIDEO ── */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{ opacity: bgVideoPlaying ? 1 : 0 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+      >
+        <video
+          className="w-full h-full object-cover"
+          style={{ filter: "brightness(0.45)" }}
+          src="/slides/herovideo.mp4"
+          loop
+          muted
+          playsInline
+          onPlay={() => setBgVideoPlaying(true)}
+          onPause={() => setBgVideoPlaying(false)}
+          id="hero-bg-video"
+        />
+      </motion.div>
+
       {/* ── BACKGROUND SLIDER ── */}
-      <div className="absolute inset-0">
+      <motion.div
+        className="absolute inset-0"
+        animate={{ opacity: bgVideoPlaying ? 0 : 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+      >
         {slides.map((s, i) => (
           <motion.div
             key={i}
@@ -99,7 +123,7 @@ export default function HeroSlider() {
             />
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* ── GRADIENT OVERLAYS ── */}
       <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/20 to-black/75 pointer-events-none" />
@@ -275,6 +299,50 @@ export default function HeroSlider() {
       >
         <ArrowRight className="w-4 h-4" />
       </button>
+
+      {/* ── VIDEO PLAY/PAUSE BUTTON ── */}
+      <motion.button
+        onClick={() => {
+          const video = document.getElementById("hero-bg-video") as HTMLVideoElement;
+          if (video) {
+            if (bgVideoPlaying) {
+              video.pause();
+            } else {
+              video.play();
+            }
+          }
+        }}
+        className="absolute bottom-8 right-8 z-30 w-11 h-11 rounded-full bg-linear-to-br from-primary to-orange-500 flex items-center justify-center text-white shadow-2xl shadow-primary/40 hover:shadow-primary/60 hover:scale-110 transition-all duration-200 cursor-pointer group"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label={bgVideoPlaying ? "Pause video" : "Play video"}
+      >
+        <AnimatePresence mode="wait">
+          {bgVideoPlaying ? (
+            <motion.div
+              key="pause"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="flex gap-1"
+            >
+              <div className="w-1 h-4 bg-white rounded-full" />
+              <div className="w-1 h-4 bg-white rounded-full" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="play"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Play className="w-4 h-4 fill-current ml-0.5" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.button>
 
       {/* ── SCROLL INDICATOR ── */}
       <motion.button
