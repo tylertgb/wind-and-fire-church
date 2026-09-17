@@ -125,7 +125,7 @@ export default function LeadershipPage() {
             className="relative rounded-3xl overflow-hidden shadow-2xl mb-8"
           >
             <Image
-              src="/gallery/event-01.jpg"
+              src="/church-board/1.jpg"
               alt="Church Board"
               width={1200}
               height={600}

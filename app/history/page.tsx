@@ -110,7 +110,7 @@ export default function HistoryPage() {
                 <div className="space-y-4">
                   <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery/sunday-01.jpg"
+                      src="/how-it-started/1.jpg"
                       alt="Early church service"
                       fill
                       className="object-cover"
@@ -118,7 +118,7 @@ export default function HistoryPage() {
                   </div>
                   <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery/event-03.jpg"
+                      src="/how-it-started/2.jpg"
                       alt="Church gathering"
                       fill
                       className="object-cover"
@@ -128,7 +128,7 @@ export default function HistoryPage() {
                 <div className="space-y-4 pt-8">
                   <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery/sunday-02.jpg"
+                      src="/how-it-started/3.jpg"
                       alt="Worship service"
                       fill
                       className="object-cover"
@@ -136,7 +136,7 @@ export default function HistoryPage() {
                   </div>
                   <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src="/gallery/event-01.jpg"
+                      src="/how-it-started/4.jpg"
                       alt="Church community"
                       fill
                       className="object-cover"

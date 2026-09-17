@@ -10,22 +10,22 @@ import {
 } from "lucide-react";
 
 const ministryUnits = [
-  { name: "Missions", image: "/gallery/ministry-01.jpg", icon: Users, color: "from-primary to-orange-500" },
-  { name: "Women's Ministry", image: "/gallery/ministry-02.jpg", icon: Heart, color: "from-rose-500 to-pink-600" },
-  { name: "Cherubs of Praise", image: "/gallery/ministry-03.jpg", icon: Music, color: "from-violet-500 to-purple-600" },
-  { name: "Melodies of Heaven", image: "/gallery/ministry-04.jpg", icon: Music, color: "from-accent to-blue-600" },
-  { name: "Media Unit", image: "/gallery/ministry-05.jpg", icon: Camera, color: "from-teal-500 to-cyan-600" },
-  { name: "Technical Unit", image: "/gallery/ministry-06.jpg", icon: Mic, color: "from-emerald-500 to-green-600" },
-  { name: "Care and Visitation", image: "/gallery/ministry-07.jpg", icon: Heart, color: "from-rose-600 to-red-600" },
-  { name: "Joy Fellowship", image: "/gallery/ministry-08.jpg", icon: Sparkles, color: "from-yellow-500 to-amber-600" },
-  { name: "Transport Team", image: "/gallery/event-01.jpg", icon: Car, color: "from-slate-600 to-gray-700" },
-  { name: "Information and Communication", image: "/gallery/event-02.jpg", icon: Info, color: "from-blue-600 to-indigo-600" },
-  { name: "Fire Kids Teachers", image: "/gallery/event-03.jpg", icon: Baby, color: "from-pink-500 to-rose-500" },
-  { name: "Ushers", image: "/gallery/sunday-01.jpg", icon: Users, color: "from-primary to-accent" },
-  { name: "Ministering Angels", image: "/gallery/sunday-02.jpg", icon: Sparkles, color: "from-violet-600 to-purple-700" },
-  { name: "Amaraba Team", image: "/gallery/sunday-03.jpg", icon: Users, color: "from-teal-600 to-emerald-600" },
-  { name: "Care Unit", image: "/gallery/sunday-05.jpg", icon: Heart, color: "from-emerald-600 to-green-700" },
-  { name: "Levites", image: "/gallery/sunday-06.jpg", icon: Music, color: "from-accent to-blue-700" },
+  { name: "Missions", image: "/ministries/missions/1.jpg", icon: Users, color: "from-primary to-orange-500" },
+  { name: "Women's Ministry", image: "/ministries/women/1.jpg", icon: Heart, color: "from-rose-500 to-pink-600" },
+  { name: "Cherubs of Praise", image: "/ministries/cherubs-of-praise/1.jpg", icon: Music, color: "from-violet-500 to-purple-600" },
+  { name: "Melodies of Heaven", image: "/ministries/melodies-of-heaven/1.jpg", icon: Music, color: "from-accent to-blue-600" },
+  { name: "Media Unit", image: "/ministries/media-unit/1.jpg", icon: Camera, color: "from-teal-500 to-cyan-600" },
+  { name: "Men's Ministry", image: "/ministries/men/1.jpg", icon: Users, color: "from-emerald-500 to-green-600" },
+  { name: "Youth Ministry", image: "/ministries/youth/1.jpg", icon: Sparkles, color: "from-rose-600 to-red-600" },
+  { name: "Joy Fellowship", image: "/ministries/joy-fellowship/1.jpg", icon: Sparkles, color: "from-yellow-500 to-amber-600" },
+  { name: "Children's Ministry", image: "/ministries/children/1.jpg", icon: Baby, color: "from-pink-500 to-rose-500" },
+  { name: "Information and Communication", image: "/ministries/information-and-communication/1.jpg", icon: Info, color: "from-blue-600 to-indigo-600" },
+  { name: "Fire Kids Teachers", image: "/ministries/fire-kids-teachers/1.jpg", icon: Baby, color: "from-pink-500 to-rose-500" },
+  { name: "Ushers", image: "/ministries/ushers/1.jpg", icon: Users, color: "from-primary to-accent" },
+  { name: "Ministering Angels", image: "/ministries/ministering-angels/1.jpg", icon: Sparkles, color: "from-violet-600 to-purple-700" },
+  { name: "Amaraba Team", image: "/ministries/amaraba-team/1.jpg", icon: Users, color: "from-teal-600 to-emerald-600" },
+  { name: "Care Unit", image: "/ministries/care-unit/1.jpg", icon: Heart, color: "from-emerald-600 to-green-700" },
+  { name: "Community Ministry", image: "/ministries/community/1.jpg", icon: Users, color: "from-accent to-blue-700" },
 ];
 
 export default function MinistriesPage() {
@@ -159,7 +159,7 @@ export default function MinistriesPage() {
               className="relative aspect-3/4 rounded-3xl overflow-hidden shadow-2xl"
             >
               <Image
-                src="/leadership/fant-sm.png"
+                src="/leadership/fantself-2.jpg"
                 alt="Wisdom & Power Encounter with Ps. A. L. Fant"
                 fill
                 className="object-cover"

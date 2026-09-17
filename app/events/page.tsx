@@ -10,32 +10,27 @@ const conferences = [
   { 
     name: "Invasion Prayer Storms", 
     description: "Powerful prayer gatherings that shake heavens and transform communities",
-    icon: Zap,
-    color: "from-primary to-orange-500"
+    icon: Zap
   },
   { 
     name: "Father's Touch", 
     description: "Encountering God's fatherhood and experiencing His love and presence",
-    icon: Sparkles,
-    color: "from-accent to-blue-600"
+    icon: Sparkles
   },
   { 
     name: "Festival of Wonders", 
     description: "Celebrating God's miraculous power with signs, wonders, and testimonies",
-    icon: Target,
-    color: "from-violet-500 to-purple-600"
+    icon: Target
   },
   { 
     name: "Weightier Matters", 
     description: "Deep teaching on kingdom priorities and spiritual maturity",
-    icon: Users,
-    color: "from-emerald-500 to-teal-600"
+    icon: Users
   },
   { 
     name: "Connecting to Mantles", 
     description: "Powerful ministry impartation and anointing transfer gatherings",
-    icon: Globe,
-    color: "from-rose-500 to-pink-600"
+    icon: Globe
   },
 ];
 
@@ -110,8 +105,8 @@ export default function EventsPage() {
                 className="group relative"
               >
                 <div className="bg-linear-to-br from-slate-50 to-white rounded-3xl p-8 border-2 border-border hover:border-primary/30 transition-all shadow-sm hover:shadow-xl">
-                  <div className={`w-16 h-16 rounded-2xl bg-linear-to-br ${conf.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
-                    <conf.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+                  <div className={`w-14 h-14 rounded-2xl bg-linear-to-br from-primary to-orange-500 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
+                    <conf.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
                     {conf.name}
@@ -233,19 +228,14 @@ export default function EventsPage() {
               transition={{ duration: 0.7 }}
               className="grid grid-cols-2 gap-4"
             >
-              {[
-                "/gallery/event-04.jpg",
-                "/gallery/event-05.jpg",
-                "/gallery/event-06.jpg",
-                "/gallery/event-07.jpg",
-              ].map((img, i) => (
+              {[1, 2, 3, 4].map((num, i) => (
                 <div
                   key={i}
                   className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group"
                 >
                   <Image
-                    src={img}
-                    alt={`Mass evangelism ${i + 1}`}
+                    src={`/evangelism-and-crusades/${num}.jpg`}
+                    alt={`Mass evangelism ${num}`}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
@@ -267,7 +257,6 @@ export default function EventsPage() {
             transition={{ duration: 0.6 }}
             className="bg-linear-to-br from-primary to-accent text-white rounded-3xl p-8 sm:p-12 text-center shadow-2xl"
           >
-            <Sparkles className="w-16 h-16 mx-auto mb-6" />
             <h3 className="font-serif text-3xl font-bold mb-4">
               Signs, Wonders & Miracles
             </h3>
@@ -299,7 +288,7 @@ export default function EventsPage() {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Array.from({ length: 12 }, (_, i) => i + 1).map((num) => (
+            {Array.from({ length: 15 }, (_, i) => i + 1).map((num) => (
               <motion.div
                 key={num}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -309,7 +298,7 @@ export default function EventsPage() {
                 className="relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group cursor-pointer"
               >
                 <Image
-                  src={`/gallery/${num % 2 === 0 ? 'sunday' : 'event'}-0${((num - 1) % 8) + 1}.jpg`}
+                  src={`/connecting-mantles/${num}.jpg`}
                   alt={`Mantles conference ${num}`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
